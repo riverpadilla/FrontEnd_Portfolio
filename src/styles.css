@@ -1,1 +1,147 @@
 /* You can add global styles to this file, and also import other style files */
+#topBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    height: 40px;
+    color: hsl(231, 71%, 41%);
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+#topBar img {
+    height: 40px;
+}
+
+a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.custom-card {
+    border-radius: 20px;
+    margin: 10px 20px;
+    padding: 20px;
+    border-color: blue;
+}
+
+#info-Header {
+    padding: 0px;
+}
+
+#info-background {
+    display: flex;
+    z-index: 1;
+}
+
+#info-background img {
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 400px;
+}
+
+#info {
+    padding: 16px;
+}
+
+#info-img {
+    display: flex;
+}
+
+#info-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-img {
+    height: 152px;
+    width: 152px;
+    margin-top: -110px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#info-details {
+    width: 15%;
+    list-style: none;
+    flex-shrink: 0;
+
+}
+
+#info-details img {
+    height: 50px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv-list {
+    list-style: none;
+}
+
+.cv-list li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv_item {
+    display: flex;
+}
+
+.cv_item img {
+    width: 80px;
+    height: 40px;
+    padding: 0px 20px;
+}
+
+#proyectos h4 {
+    color: blue;
+}
+
+
+p {
+    line-height: 1.2;
+    font-size: 10pt;
+}
+
+.bar-item {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+
+.progress {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#bar1 {
+    width: 85%;
+}
+
+#bar2 {
+    width: 75%;
+}
+
+.pr-list {
+    list-style: none;
+}
+
+.pr-list div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#edit-about,
+#edit-image {
+    display: none;
+}
