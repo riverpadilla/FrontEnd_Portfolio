@@ -1,0 +1,42 @@
+<div class="card custom-card" id="info-Header">
+
+    <div id="info-background">
+        <img class="backgnd-img" [src]="dataPortfolio.backImage" alt="Imagen Background">
+
+    </div>
+
+    <div id="info">
+        <div id="info-img">
+            <img class="profile-img" [src]="dataPortfolio.profileImage" alt="Profile Image">
+            <div class="btn-edit" onclick="item_Edit(0)"> <a href="#" class="btn-right" title="Editar"> <i
+                        class="fa-solid fa-pencil"></i>
+                </a> </div>
+            <div>
+                <input type="file" id="edit-image" onchange="showFile(this)" title="Edit Picture">
+            </div>
+        </div>
+        <div id="info-data">
+            <div>
+                <h1> {{dataPortfolio.name}} </h1>
+                <div id="info-company"> {{dataPortfolio.position}} </div>
+                <div id="info-contacto">
+                    <span> {{dataPortfolio.location}} </span>
+                    <span> <a [href]="dataPortfolio.email">Informacion de Contacto</a></span>
+                </div>
+            </div>
+            <ul id="info-details">
+                <li><a [href]="dataPortfolio.company.url">
+                        <img [src]="dataPortfolio.company.logo" alt="Logo Ministerio de Desarrollo Productivo">
+                        <h5>{{dataPortfolio.company.name}}</h5>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="info-actions">
+            <input type="button" class="btn btn-primary" value="Tengo interés en">
+            <input type="button" class="btn btn-light" value="Añadir Sección">
+            <input type="button" class="btn btn-light" value="Más">
+        </div>
+    </div>
+</div>

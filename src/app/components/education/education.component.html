@@ -1,0 +1,26 @@
+<div class="card custom-card" id="education">
+    <div class="card-title">
+        <h2> Educación </h2>
+        <div class="btn-add"> <a href="#" title="begin"> <i class="fa-solid fa-plus"></i> </a> </div>
+    </div>
+
+    <ul class="cv-list">
+        <li *ngFor="let education of dataEducation">
+            <div class="cv_item">
+                <img [src]="education.logo" class="border border-0" [alt]="education.description">
+                <div>
+                    <h4> {{education.school}} </h4>
+                    <p> 
+                        {{education.title}}
+                        <br>
+                        {{education.date}}
+                    </p>
+                </div>
+            </div>
+            <div class="btn-edit">
+                <a href="#" title="begin"> <i class="fa-solid fa-pencil"></i> </a>
+                <a href="#" title="begin"> <i class="fa-solid fa-trash-can"></i> </a>
+            </div>
+        </li>
+    </ul>
+</div>
