@@ -1,0 +1,75 @@
+{
+
+    
+    "backImage":"./assets/images/Background.jpg",
+    "name":"Rivelino Padilla",
+    "position":"Desarrollador Independiente",
+    "profileImage": "./assets/images/Rivelino.jpg",
+    "location":"Neuquén, Argentina",
+    "email":"mailto://riverpadilla@msn.com",
+    "company":{
+    "name":"Argentina Programa",
+    "logo": "https://www.argentina.gob.ar/sites/default/files/min_desarrollo_productivo.png",
+    "url": "#"
+    },
+    
+
+    "about": "Ingeniero de Petróleos y Desarrollador de Software, con interés en nuevas tecnologías, tanto en la parte de software como en hardware.",
+
+    "experience":
+    [
+        {
+            "logo": "./assets/images/VS.png",
+            "description": "Logo Visual Studio",
+            "position":"",
+            "company":"Rivernet Inc",
+            "period": "Jul 2005 - Actual",
+            "location": "Neuquén, Argentina"
+        },
+        {
+            "logo": "./assets/images/sql.png",
+            "description": "Logo SQL",
+            "position":"Desarrollador Bases de Datos SQL",
+            "company":"Rivernet Inc",
+            "period": "Nov 2004 - Jun 2005",
+            "location": "Villahermosa, Mexico"
+        },
+        {
+            "logo": "./assets/images/vba.png",
+            "description": "Logo Visual Basic for Applications",
+            "position":"Programador VBA",
+            "company":"Rivernet Inc",
+            "period": "Mar 1998 - Oct 2004",
+            "location": "Bucaramanga, Colombia"
+        }
+    ],
+    "education":
+    [
+        {
+            "school": "Universidad industrial de Santander",
+            "title": "Ingeniero de Petróleos",
+            "logo":"./assets/images/uis.png",
+            "date": "1992-1998",
+            "description": "Logo UIS"
+        },
+        {
+            "school": "Colegio San Pedro Claver",
+            "title": "Bachiller Académico",
+            "logo":"./assets/images/cspc.png",
+            "date": "1986-1991",
+            "description": "Logo Colegio San Pedro Claver"
+        }
+    ],
+
+    "project":
+    [
+        {
+            "title":"Software para Predicción de Hidratos",
+            "description":"Desarrollamos un software para predecir la formación de hidratos en lineas de flujo de gas natural."
+        },
+        {
+            "title":"Aplicación para reportes de pruebas de producción",
+            "description":"Desarrollé una aplicación para facilitar la elaboración de reportes en pruebas de producción en pozos de gas."
+        }
+    ]
+}
