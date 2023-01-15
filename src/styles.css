@@ -1,18 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-#topBar {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    height: 40px;
-    color: hsl(231, 71%, 41%);
-    font-size: 20px;
-    font-weight: 600;
 
-}
-
-#topBar img {
-    height: 40px;
-}
 
 a {
     margin-left: 10px;
@@ -64,14 +51,14 @@ a {
 }
 
 #info-details {
-    width: 15%;
+    width: 25%;
     list-style: none;
+    text-align: center;
     flex-shrink: 0;
-
 }
 
 #info-details img {
-    height: 50px;
+    width: 100%;
 }
 
 .card-title {
@@ -143,5 +130,5 @@ p {
 
 #edit-about,
 #edit-image {
-    display: none;
+    display: block;
 }

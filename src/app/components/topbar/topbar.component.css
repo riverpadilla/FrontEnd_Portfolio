@@ -1,0 +1,24 @@
+
+#topBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    height: 40px;
+    color: hsl(231, 71%, 41%);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.titulo {
+    margin-left: 10px;
+    color: blue;
+}
+
+.social {
+   margin-right: 10px;
+}
+
+.social img {
+    height: 40px;
+}
+

@@ -1,15 +1,21 @@
 {
-
+    "barInfo":
+    {
+        "title": "Rivelino Padilla Doria",
+        "twitterUrl":"https://twitter.com/riverpadilla",
+        "youTubeUrl":"https://youtube.com/riverpadilla",
+        "instagramUrl":"https://www.instagram.com/rivernetinc/"
+    },
     
     "backImage":"./assets/images/Background.jpg",
     "name":"Rivelino Padilla",
-    "position":"Desarrollador Independiente",
+    "position":"Estudiante para Programador Full Stack Web Jr",
     "profileImage": "./assets/images/Rivelino.jpg",
     "location":"Neuquén, Argentina",
     "email":"mailto://riverpadilla@msn.com",
     "company":{
-    "name":"Argentina Programa",
-    "logo": "https://www.argentina.gob.ar/sites/default/files/min_desarrollo_productivo.png",
+    "name":"Capacitación Argentina Programa",
+    "logo": "./assets/images/APLogo.jpg",
     "url": "#"
     },
     
@@ -21,7 +27,7 @@
         {
             "logo": "./assets/images/VS.png",
             "description": "Logo Visual Studio",
-            "position":"",
+            "position":"Desarrollador Visual Studio",
             "company":"Rivernet Inc",
             "period": "Jul 2005 - Actual",
             "location": "Neuquén, Argentina"

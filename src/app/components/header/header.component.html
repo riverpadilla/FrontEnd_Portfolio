@@ -8,8 +8,8 @@
     <div id="info">
         <div id="info-img">
             <img class="profile-img" [src]="dataPortfolio.profileImage" alt="Profile Image">
-            <div class="btn-edit" onclick="item_Edit(0)"> <a href="#" class="btn-right" title="Editar"> <i
-                        class="fa-solid fa-pencil"></i>
+            <div class="btn-edit" onclick="item_Edit(0)"> <a href="#" class="btn-right" title="Editar Foto Portfolio"> 
+                <i class="fa-solid fa-pencil"></i>
                 </a> </div>
             <div>
                 <input type="file" id="edit-image" onchange="showFile(this)" title="Edit Picture">
@@ -26,7 +26,7 @@
             </div>
             <ul id="info-details">
                 <li><a [href]="dataPortfolio.company.url">
-                        <img [src]="dataPortfolio.company.logo" alt="Logo Ministerio de Desarrollo Productivo">
+                        <img [src]="dataPortfolio.company.logo" [alt]="dataPortfolio.company.name">
                         <h5>{{dataPortfolio.company.name}}</h5>
                     </a>
                 </li>

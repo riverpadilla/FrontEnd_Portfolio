@@ -1,13 +1,16 @@
 <div class="card custom-card" id="about">
     <div class="card-title">
         <h2> Acerca de </h2>
-        <div class="btn-edit" onclick="item_Edit(1)"> <a href="#" title="Editar"> <i class="fa-solid fa-pencil"></i>
-            </a> </div>
+        <div class="btn-edit" (click)="itemEdit()"> 
+            <a href="#" class = "btn-right" title="Editar Información Acerca de"> 
+                <i class="fa-solid fa-pencil"></i>
+            </a> 
+        </div>
     </div>
     <div>
         <span id="text-about"> {{dataAbout}} </span>
     </div>
     <div>
-        <input title="Editar" type="text" id="edit-about" oninput="functionEdit(this.value)">
+        <input  id="edit-about" title="Editar" type="text"  oninput="saveEdit(this.value)">
     </div>
 </div>
