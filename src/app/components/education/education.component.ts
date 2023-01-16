@@ -14,11 +14,24 @@ export class EducationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => 
+    this.datosPortfolio.obtenerDatos("education").subscribe(data => 
     { 
       this.dataEducation=data.education;
     });
     
   }
 
+  onEdit(education:any){
+    console.log("Editando registro Educación");
+    console.log(education)
+  }
+
+  onDelete(education:any)
+  {
+   this.datosPortfolio.borrarEducation(education).subscribe(() =>
+    {
+      this.dataEducation = this.dataEducation.filter((t: { id: any; }) => t.id !== education.id)
+    });
+    //console.log(this.dataEducation)
+  }  
 }

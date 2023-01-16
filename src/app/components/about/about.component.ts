@@ -16,20 +16,24 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => 
+    this.datosPortfolio.obtenerDatos("header").subscribe(data => 
     { 
       this.dataAbout=data.about;
     });
     
   }
 
-  itemEdit() {
-    let textabout = document.getElementById("text-about")?.innerText;
-    console.log(textabout);
+  editAbout() {
+    this.dataAbout="Esta es una prueba";
+    this.datosPortfolio.editarAbout(this.dataAbout).subscribe(data =>
+      {
+        data.about=this.dataAbout;
+      }
+      )
   }
 
-  saveEdit(valor:string){
-    //document.getElementById("text-about").innerText=valor;
+  saveAbout(textoAbout:string){
+    //textoAbout = document.getElementById("text-about").innerText;
   }
 
 }

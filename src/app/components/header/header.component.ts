@@ -9,16 +9,16 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 
 export class HeaderComponent implements OnInit {
 
-  dataPortfolio:any;
+  headerPortfolio:any;
 
   constructor(private datosPortfolio: PortfolioService) {
 
  }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => 
+    this.datosPortfolio.obtenerDatos("header").subscribe(data => 
     { 
-      this.dataPortfolio=data;
+      this.headerPortfolio=data;
     });
     
   }

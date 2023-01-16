@@ -15,9 +15,10 @@ export class TopbarComponent implements OnInit {
  }
 
  ngOnInit(): void {
-  this.datosPortfolio.obtenerDatos().subscribe(data => 
+  this.datosPortfolio.obtenerDatos("barInfo").subscribe(data => 
   { 
     this.topBarPortfolio=data;
+    console.log(this.topBarPortfolio);
   });
   
 }

@@ -17,9 +17,10 @@
                     </p>
                 </div>
             </div>
-            <div class="btn-edit">
-                <a href="#" title="begin"> <i class="fa-solid fa-pencil"></i> </a>
-                <a href="#" title="begin"> <i class="fa-solid fa-trash-can"></i> </a>
+            <div>
+               
+                <div class="btn text-primary" (click)="onEdit(education)"><i class="fa-solid fa-pencil"></i></div>
+                <div class="btn text-primary" (click)="onDelete(education)"><i class="fa-solid fa-trash-can"></i></div>
             </div>
         </li>
     </ul>

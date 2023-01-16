@@ -1,33 +1,33 @@
 <div class="card custom-card" id="info-Header">
 
     <div id="info-background">
-        <img class="backgnd-img" [src]="dataPortfolio.backImage" alt="Imagen Background">
+        <img class="backgnd-img" [src]="headerPortfolio.backImage" alt="Imagen Background">
 
     </div>
 
     <div id="info">
         <div id="info-img">
-            <img class="profile-img" [src]="dataPortfolio.profileImage" alt="Profile Image">
+            <img class="profile-img" [src]="headerPortfolio.profileImage" alt="Profile Image">
             <div class="btn-edit" onclick="item_Edit(0)"> <a href="#" class="btn-right" title="Editar Foto Portfolio"> 
                 <i class="fa-solid fa-pencil"></i>
                 </a> </div>
-            <div>
+ <!--           <div>
                 <input type="file" id="edit-image" onchange="showFile(this)" title="Edit Picture">
-            </div>
+            </div> -->
         </div>
         <div id="info-data">
             <div>
-                <h1> {{dataPortfolio.name}} </h1>
-                <div id="info-company"> {{dataPortfolio.position}} </div>
+                <h1> {{headerPortfolio.name}} </h1>
+                <div id="info-company"> {{headerPortfolio.position}} </div>
                 <div id="info-contacto">
-                    <span> {{dataPortfolio.location}} </span>
-                    <span> <a [href]="dataPortfolio.email">Informacion de Contacto</a></span>
+                    <span> {{headerPortfolio.location}} </span>
+                    <span> <a [href]="headerPortfolio.email">Informacion de Contacto</a></span>
                 </div>
             </div>
             <ul id="info-details">
-                <li><a [href]="dataPortfolio.company.url">
-                        <img [src]="dataPortfolio.company.logo" [alt]="dataPortfolio.company.name">
-                        <h5>{{dataPortfolio.company.name}}</h5>
+                <li><a [href]="headerPortfolio.companyUrl">
+                        <img [src]="headerPortfolio.companyLogo" [alt]="headerPortfolio.companyName">
+                        <h5>{{headerPortfolio.companyName}}</h5>
                     </a>
                 </li>
             </ul>
