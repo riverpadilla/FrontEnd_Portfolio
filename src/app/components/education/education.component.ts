@@ -8,15 +8,16 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class EducationComponent implements OnInit {
   dataEducation:any;
+  componente:string="education";
 
   constructor(private datosPortfolio: PortfolioService) {
 
   }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos("education").subscribe(data => 
+    this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
     { 
-      this.dataEducation=data.education;
+      this.dataEducation=data;
     });
     
   }
@@ -28,10 +29,10 @@ export class EducationComponent implements OnInit {
 
   onDelete(education:any)
   {
-   this.datosPortfolio.borrarEducation(education).subscribe(() =>
+   this.datosPortfolio.borrarItem(this.componente,education).subscribe(() =>
     {
       this.dataEducation = this.dataEducation.filter((t: { id: any; }) => t.id !== education.id)
     });
-    //console.log(this.dataEducation)
+
   }  
 }

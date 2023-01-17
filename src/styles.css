@@ -6,6 +6,12 @@ a {
     text-decoration: none;
 }
 
+.fa-solid {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
 .custom-card {
     border-radius: 20px;
     margin: 10px 20px;
@@ -101,21 +107,6 @@ p {
     margin-right: 10%;
 }
 
-.progress {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10px;
-    margin-bottom: 25px;
-}
-
-#bar1 {
-    width: 85%;
-}
-
-#bar2 {
-    width: 75%;
-}
-
 .pr-list {
     list-style: none;
 }
@@ -127,5 +118,5 @@ p {
 
 #edit-about,
 #edit-image {
-    display: block;
+    display: none;
 }

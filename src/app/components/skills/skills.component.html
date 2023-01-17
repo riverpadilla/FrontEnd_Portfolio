@@ -1,38 +1,24 @@
 <div class="card custom-card" id="skills">
     <div class="card-title">
         <h2> Hard Skills & Soft Skills </h2>
-        <div class="btn-add"> <a href="#"> <i class="fa-solid fa-plus"></i> </a> </div>
+        <div class="btn-add"> <a href="#" title="Adicionar Skill"> <i class="fa-solid fa-plus"></i> </a> </div>
     </div>
 
-    <div>
-        <div class="bar-item">
-            <p>Resolución de Problemas</p>
-            <div>
-                <a href="#"> <i class="fa-solid fa-pencil"></i> </a>
-                <a href="#"> <i class="fa-solid fa-trash-can"></i> </a>
+    <ul class="cv-list">
+        <li *ngFor="let skill of dataSkills" class="row">
+            <div class="bar-item">
+                <div class="col-8">  {{skill.description}} </div>
+                <div class="col-4">
+                    <div class="btn text-primary" (click)="onEdit(skill)"><i class="fa-solid fa-pencil"></i></div>
+                    <div class="btn text-primary" (click)="onDelete(skill)"><i class="fa-solid fa-trash-can"></i></div>
+                </div>
             </div>
-        </div>
+            <div class="progress rounded-0 col-10">
+                <div class="progress-bar progress-bar-striped bg-success" [id]="skill.id" role="progressbar"
+                aria-label="Progresion de Skill"  [ngStyle]="{'width': skill.grade}" aria-valuemax="100"> {{skill.grade}}
+                </div>
+            </div>
 
-        <div class="progress rounded-0">
-            <div class="progress-bar progress-bar-striped bg-success" id="bar1" role="progressbar"
-                aria-label="Progress1" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <div class="bar-item">
-            <p>Diseño de Sistemas</p>
-            <div>
-                <a href="#"> <i class="fa-solid fa-pencil"></i> </a>
-                <a href="#"> <i class="fa-solid fa-trash-can"></i> </a>
-            </div>
-        </div>
-
-        <div class="progress rounded-0">
-            <div class="progress-bar progress-bar-striped bg-success" id="bar2" role="progressbar"
-                aria-label="Progress2" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%
-            </div>
-        </div>
-    </div>
+        </li>
+    </ul>
 </div>

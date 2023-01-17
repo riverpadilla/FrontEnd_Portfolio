@@ -8,16 +8,31 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class ExperienceComponent implements OnInit {
   dataExperience:any;
+  componente:string="experience";
 
   constructor(private datosPortfolio: PortfolioService) {
 
   }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos("experience").subscribe(data => 
+    this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
     { 
-      this.dataExperience=data.experience;
+      this.dataExperience=data;
     });
     
+  }
+
+  onEdit(experience:any){
+    console.log("Editando registro Experiencia");
+    console.log(experience)
+  }
+
+  onDelete(experience:any)
+  {
+   this.datosPortfolio.borrarItem(this.componente, experience).subscribe(() =>
+    {
+      this.dataExperience = this.dataExperience.filter((t: { id: any; }) => t.id !== experience.id)
+    });
+
   }
 }

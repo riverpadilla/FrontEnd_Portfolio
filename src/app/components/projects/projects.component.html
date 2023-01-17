@@ -1,7 +1,7 @@
 <div class="card custom-card" id="projects">
     <div class="card-title">
         <h2> Proyectos </h2>
-        <div class="btn-add"> <a href="#"> <i class="fa-solid fa-plus"></i> </a> </div>
+        <div class="btn-add"> <a href="#" title="Adicionar Proyecto"> <i class="fa-solid fa-plus"></i> </a> </div>
     </div>
 
     <ul class="pr-list">
@@ -10,8 +10,8 @@
             <div>
                 <h4> {{proj.title}} </h4>
                 <div>
-                    <a href="#"> <i class="fa-solid fa-pencil"></i> </a>
-                    <a href="#"> <i class="fa-solid fa-trash-can"></i> </a>
+                    <div class="btn text-primary" (click)="onEdit(proj)"><i class="fa-solid fa-pencil"></i></div>
+                    <div class="btn text-primary" (click)="onDelete(proj)"><i class="fa-solid fa-trash-can"></i></div>
                 </div>
             </div>
 

@@ -1,27 +1,24 @@
 {
     "barInfo":
     {
-        "title": "Rivelino Padilla Doria",
+        "barTitle": "Rivelino Padilla Doria",
         "twitterUrl":"https://twitter.com/riverpadilla",
         "youTubeUrl":"https://youtube.com/riverpadilla",
         "instagramUrl":"https://www.instagram.com/rivernetinc/"
     },
-    
-    "backImage":"./assets/images/Background.jpg",
-    "name":"Rivelino Padilla",
-    "position":"Estudiante para Programador Full Stack Web Jr",
-    "profileImage": "./assets/images/Rivelino.jpg",
-    "location":"Neuquén, Argentina",
-    "email":"mailto://riverpadilla@msn.com",
-    "company":{
-    "name":"Capacitación Argentina Programa",
-    "logo": "./assets/images/APLogo.jpg",
-    "url": "#"
+    "header":
+    {
+        "backImage":"./assets/images/Background.jpg",
+        "name":"Rivelino Padilla",
+        "position":"Estudiante para Programador Full Stack Web Jr",
+        "profileImage": "./assets/images/Rivelino.jpg",
+        "location":"Neuquén, Argentina",
+        "email":"mailto://riverpadilla@msn.com",
+        "companyName":"Capacitación Argentina Programa",
+        "companyLogo": "./assets/images/APLogo.jpg",
+        "companyUrl": "#",
+        "about": "Ingeniero de Petróleos y Desarrollador de Software, con interés en nuevas tecnologías, tanto en la parte de software como en hardware."
     },
-    
-
-    "about": "Ingeniero de Petróleos y Desarrollador de Software, con interés en nuevas tecnologías, tanto en la parte de software como en hardware.",
-
     "experience":
     [
         {

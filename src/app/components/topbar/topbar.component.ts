@@ -18,7 +18,6 @@ export class TopbarComponent implements OnInit {
   this.datosPortfolio.obtenerDatos("barInfo").subscribe(data => 
   { 
     this.topBarPortfolio=data;
-    console.log(this.topBarPortfolio);
   });
   
 }
