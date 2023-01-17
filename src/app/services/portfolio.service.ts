@@ -26,9 +26,23 @@ export class PortfolioService {
     return  this.http.delete(url);
   }
 
-  editarItem(componente:string, item:any):Observable<any>{
-    const url=this.apiUrl + "/" + componente + "/"+ `${item.id}`;
+
+ // editarAbout(componente:string,item:any):Observable<any>{
+ //   const url=this.apiUrl + "/" + componente + "/"+ `${item.id}`;
+ //   console.log(url);
+//  return  this.http.put(url,item,httpOptions);
+ // }
+
+  editarItem(componente:string, item:any, check:boolean):Observable<any>{
+    let url:string="";
+    if (check){
+      url =this.apiUrl + "/" + componente + "/"+ `${item.id}`;
+    } else{
+      url=this.apiUrl + "/" + componente;
+    }
+    
     console.log(url);
+    console.log(item);
     return  this.http.put(url,item,httpOptions);
   }
 }

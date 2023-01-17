@@ -1,16 +1,24 @@
 <div class="card custom-card" id="about">
     <div class="card-title">
         <h2> Acerca de </h2>
-        <div class="btn-edit" (click)="editAbout(dataAbout)"> 
+        <div class="btn-edit" (click)="showEdit(headerPortfolio)"> 
             <a href="#" class="btn-right" title="Editar Información Acerca de"> 
                 <i class="fa-solid fa-pencil"></i>
             </a> 
         </div>
     </div>
     <div>
-        <span id="text-about"> {{dataAbout}} </span>
+        <p id="text-about"> {{headerPortfolio.about}} </p>
     </div>
-    <div>
-        <input  id="edit-about" title="Editar" type="text"  oninput="saveAbout(this.value)">
-    </div>
+        <div class="input-group">
+            <span class="input-group-text">Acerca de:</span>
+            <input 
+                type="text"
+                class="form-control"
+                placeholder="Introducir aquí datos de interes acerca de usted" 
+                [(ngModel)]="textoAcercaDe"
+            >
+                <button class="btn btn-primary" type="button" (click)="onSubmit()" id="btnSave">Guardar</button>
+                <button class="btn btn-primary" type="button" id="btnCancel">Cancelar</button>
+        </div>
 </div>

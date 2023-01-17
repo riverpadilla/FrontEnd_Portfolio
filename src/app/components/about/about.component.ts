@@ -9,9 +9,9 @@ import { PortfolioService } from 'src/app/services/portfolio.service'
 
 export class AboutComponent implements OnInit {
 
-  dataAbout:any;
+  headerPortfolio:any;
   componente:string="header";
-  textoAbout?:string="";
+  textoAcercaDe:string="";
 
   constructor(private datosPortfolio: PortfolioService) {
 
@@ -20,19 +20,22 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
     { 
-      this.dataAbout=data.about;
+      this.headerPortfolio=data;
     });
     
   }
 
-  editAbout(item:any) {
-    this.textoAbout = document.getElementById("text-about")?.innerText;
-    console.log(this.textoAbout);
-    this.datosPortfolio.editarItem(this.componente,item).subscribe();
-  }
+showEdit(item:any){
+  console.log(item.id);
+}
 
-  saveAbout(textoAbout:string){
-    //textoAbout = document.getElementById("text-about").innerText;
+  onSubmit(){
+    if(this.textoAcercaDe.length==0){
+      alert("Incluir una breve información acerca de usted. No puede dejar este espacio en blanco");
+      return
+    }
+    this.headerPortfolio.about=this.textoAcercaDe;
+    this.datosPortfolio.editarItem(this.componente,this.headerPortfolio,false).subscribe();
   }
 
 }

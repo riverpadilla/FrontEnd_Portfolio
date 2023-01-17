@@ -1,6 +1,7 @@
 {
   "barInfo":
     {
+    "id": 1,
     "barTitle": "Rivelino Padilla Doria",
     "twitterUrl": "https://twitter.com/riverpadilla",
     "youTubeUrl": "https://youtube.com/riverpadilla",
@@ -8,6 +9,7 @@
     },
   "header":
     {
+    "id":1,
     "backImage": "./assets/images/Background.jpg",
     "name": "Rivelino Padilla",
     "position": "Estudiante para Programador Full Stack Web Jr",
