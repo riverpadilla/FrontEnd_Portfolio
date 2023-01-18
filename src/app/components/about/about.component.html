@@ -1,7 +1,7 @@
 <div class="card custom-card" id="about">
     <div class="card-title">
         <h2> Acerca de </h2>
-        <div class="btn-edit" (click)="showEdit(headerPortfolio)"> 
+        <div class="btn-edit" (click)="showEdit()"> 
             <a href="#" class="btn-right" title="Editar Información Acerca de"> 
                 <i class="fa-solid fa-pencil"></i>
             </a> 
@@ -10,7 +10,7 @@
     <div>
         <p id="text-about"> {{headerPortfolio.about}} </p>
     </div>
-        <div class="input-group">
+        <div class="input-group" *ngIf="showFormulario">
             <span class="input-group-text">Acerca de:</span>
             <input 
                 type="text"
@@ -19,6 +19,6 @@
                 [(ngModel)]="textoAcercaDe"
             >
                 <button class="btn btn-primary" type="button" (click)="onSubmit()" id="btnSave">Guardar</button>
-                <button class="btn btn-primary" type="button" id="btnCancel">Cancelar</button>
+                <button class="btn btn-primary" type="button" (click)="onCancel()" id="btnCancel">Cancelar</button>
         </div>
 </div>

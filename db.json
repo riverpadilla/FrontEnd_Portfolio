@@ -1,15 +1,13 @@
 {
-  "barInfo":
-    {
+  "barInfo": {
     "id": 1,
     "barTitle": "Rivelino Padilla Doria",
     "twitterUrl": "https://twitter.com/riverpadilla",
     "youTubeUrl": "https://youtube.com/riverpadilla",
     "instagramUrl": "https://www.instagram.com/rivernetinc/"
-    },
-  "header":
-    {
-    "id":1,
+  },
+  "header": {
+    "id": 1,
     "backImage": "./assets/images/Background.jpg",
     "name": "Rivelino Padilla",
     "position": "Estudiante para Programador Full Stack Web Jr",
@@ -20,7 +18,7 @@
     "companyLogo": "./assets/images/APLogo.jpg",
     "companyUrl": "#",
     "about": "Ingeniero de Petróleos y Desarrollador de Software, con interés en nuevas tecnologías, tanto en la parte de software como en hardware."
-    },
+  },
   "experience": [
     {
       "id": 1,
@@ -68,18 +66,18 @@
       "description": "Logo Colegio San Pedro Claver"
     }
   ],
-  "skill":[
+  "skill": [
     {
       "id": 1,
-      "description":"Resolución de Problemas",
-      "label":"progress1",
-      "grade":"85%"
+      "description": "Resolución de Problemas",
+      "label": "progress1",
+      "grade": "85%"
     },
     {
       "id": 2,
-      "description":"Diseño de Sistemas",
-      "label":"progress2",
-      "grade":"75%"
+      "description": "Diseño de Sistemas",
+      "label": "progress2",
+      "grade": "75%"
     }
   ],
   "project": [

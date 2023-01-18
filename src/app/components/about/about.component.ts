@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { PortfolioService } from 'src/app/services/portfolio.service'
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about',
@@ -12,9 +13,11 @@ export class AboutComponent implements OnInit {
   headerPortfolio:any;
   componente:string="header";
   textoAcercaDe:string="";
+  showFormulario:boolean=false;
+  suscription?:Subscription;
 
   constructor(private datosPortfolio: PortfolioService) {
-
+    this.suscription = this.datosPortfolio.onToggle().subscribe(value => this.showFormulario = value)
   }
 
   ngOnInit(): void {
@@ -25,9 +28,13 @@ export class AboutComponent implements OnInit {
     
   }
 
-showEdit(item:any){
-  console.log(item.id);
-}
+  showEdit(){
+    this.datosPortfolio.toggleFormulario(true);
+  }
+
+  onCancel(){
+    this.datosPortfolio.toggleFormulario(false);
+  }
 
   onSubmit(){
     if(this.textoAcercaDe.length==0){
@@ -36,6 +43,7 @@ showEdit(item:any){
     }
     this.headerPortfolio.about=this.textoAcercaDe;
     this.datosPortfolio.editarItem(this.componente,this.headerPortfolio,false).subscribe();
+    this.onCancel();
   }
 
 }
