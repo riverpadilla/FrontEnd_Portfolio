@@ -13,6 +13,7 @@ export class AboutComponent implements OnInit {
   headerPortfolio:any;
   componente:string="header";
   textoAcercaDe:string="";
+
   showFormulario:boolean=false;
   suscription?:Subscription;
 
@@ -28,7 +29,7 @@ export class AboutComponent implements OnInit {
     
   }
 
-  showEdit(){
+  onEdit(){
     this.datosPortfolio.toggleFormulario(true);
   }
 

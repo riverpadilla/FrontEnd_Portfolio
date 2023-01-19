@@ -13,6 +13,9 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { PortfolioService } from './services/portfolio.service';
+import { EditEducationComponent } from './components/edit-education/edit-education.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
+
 
 
 @NgModule({
@@ -24,7 +27,9 @@ import { PortfolioService } from './services/portfolio.service';
     EducationComponent,
     SkillsComponent,
     ExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    EditEducationComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,

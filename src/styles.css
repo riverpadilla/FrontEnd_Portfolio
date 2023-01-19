@@ -16,7 +16,7 @@ a {
     border-radius: 20px;
     margin: 10px 20px;
     padding: 20px;
-    border-color: blue;
+    border-color: steelblue;
 }
 
 #info-Header {
@@ -119,3 +119,4 @@ p {
 #edit-image {
     display: none;
 }
+

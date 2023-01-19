@@ -9,7 +9,7 @@
             <div class="bar-item">
                 <div class="col-8">  {{skill.description}} </div>
                 <div class="col-4">
-                    <div class="btn text-primary" (click)="onEdit(skill)"><i class="fa-solid fa-pencil"></i></div>
+                    <div class="btn text-primary" (click)="onEdit()"><i class="fa-solid fa-pencil"></i></div>
                     <div class="btn text-primary" (click)="onDelete(skill)"><i class="fa-solid fa-trash-can"></i></div>
                 </div>
             </div>
@@ -18,7 +18,25 @@
                 aria-label="Progresion de Skill"  [ngStyle]="{'width': skill.grade}" aria-valuemax="100"> {{skill.grade}}
                 </div>
             </div>
-
+            <div class="input-group">
+                <span class="input-group-text">Descripción Skill:</span>
+                <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Descripción del Skill"
+                    [(ngModel)]="description"
+                >
+                <span class="input-group-text">Proficiencia:</span>
+                <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="proficiencia en el skill" 
+                    [(ngModel)]="grade"
+                >
+                    <button class="btn btn-primary" type="button" (click)="onSubmit(skill)" id="btnSave">Guardar</button>
+                    <button class="btn btn-primary" type="button" (click)="onCancel()" id="btnCancel">Cancelar</button>
+            </div>
+            {{description}}
         </li>
     </ul>
 </div>

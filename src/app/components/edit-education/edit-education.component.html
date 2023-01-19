@@ -1,0 +1,54 @@
+
+
+<form 
+class="edit-form" 
+(ngSubmit)="onSubmit()"
+>
+  <h2 class="mb-3">Entrada de Datos</h2>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Nombre de Institución:</span>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="formControlInput1" 
+      placeholder="Nombre de Institución Educativa donde realizó estudios"
+      [ngModel]="school"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Titulo Obtenido:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput2"
+      placeholder="Título obtenido en Institución Educativa"
+      [ngModel]="title"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Período de Estudio:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput3"
+      placeholder="Año de Inicio y de Finalización de Estudios"
+      [ngModel]="date"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Logo de Institución:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput4"
+      placeholder="Ruta de acceso a la imagen que identifica la Institución Educativa"
+      [ngModel]="logoUrl"
+      >
+  </div>
+
+    <div class="btn-group container" role="group" aria-label="Basic example">
+      <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" id="btnSave">Guardar</button>
+      <button class="btn btn-primary col-5" type="button" routerLink="/" id="btnCancel">Cancelar</button>
+    </div>
+   
+</form>

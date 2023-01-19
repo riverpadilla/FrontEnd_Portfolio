@@ -19,7 +19,7 @@ export class PortfolioService {
 
 
   toggleFormulario(check:boolean):void{
-    this.showFormulario= check;
+    this.showFormulario = check;
     this.subject.next(this.showFormulario);
   }
 
