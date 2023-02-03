@@ -2,23 +2,34 @@
 #topBar {
     display: flex;
     justify-content: space-between;
-    margin: 10px;
-    height: 40px;
-    color: hsl(231, 71%, 41%);
+    margin: 10px 20px;
+    height: 60px;
     font-size: 20px;
     font-weight: 600;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
 }
 
-.titulo {
+
+.logo_programa {
     margin-left: 10px;
-    color: blue;
+}
+
+.logo_programa img{
+    margin-top: 5px;
+    height: 50px;
 }
 
 .social {
-   margin-right: 10px;
+   margin-top: 10px;
 }
 
 .social img {
     height: 40px;
+}
+
+.social span {
+    margin-left: 10px;
+    margin-right: 20px;
 }
 

@@ -1,18 +1,22 @@
 <div id="topBar">
-    <div class="titulo">
-        <span >{{topBarPortfolio.barTitle}}</span>
+    <div class="logo_programa">
+        <img src="./assets/images/APLogo.png" alt="Argentina Programa">
     </div>
 
     <div class="social">
-        <a [href]="topBarPortfolio.twitterUrl" [title]="topBarPortfolio.twitterUrl">
-            <img src="./assets/images/Twitter.jpg" alt="Twitter Logo">
+
+        <a [href]="topBarPortfolio.githubUrl" [title]="topBarPortfolio.githubUrl">
+            <img src="./assets/images/github.png" alt="Github Logo">
         </a>
-        <a [href]="topBarPortfolio.youTubeUrl" [title]="topBarPortfolio.youTubeUrl">
-            <img src="./assets/images/youtube.jpg" alt="YouTube Logo">
+        <a [href]="topBarPortfolio.twitterUrl" [title]="topBarPortfolio.twitterUrl">
+            <img src="./assets/images/twitter.png" alt="Twitter Logo">
+        </a>
+        <a [href]="topBarPortfolio.facebookUrl" [title]="topBarPortfolio.facebookUrl">
+            <img src="./assets/images/facebook.png" alt="Facebook Logo">
         </a>
         <a [href]="topBarPortfolio.instagramUrl" [title]="topBarPortfolio.instagramUrl">
-            <img src="./assets/images/Instagram.jpg" alt="Instagram Logo">
+            <img src="./assets/images/instagram.png" alt="Instagram Logo">
         </a>
-        <input type="button" class="btn btn-primary" value="Login">
+        <span> <input type="button" class="btn btn-primary" value="Login"></span>
     </div>
 </div>

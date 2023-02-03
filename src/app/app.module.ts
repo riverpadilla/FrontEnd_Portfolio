@@ -13,8 +13,10 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { PortfolioService } from './services/portfolio.service';
+import { EditExperienceComponent } from './components/edit-experience/edit-experience.component';
 import { EditEducationComponent } from './components/edit-education/edit-education.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
+
 
 
 
@@ -29,7 +31,8 @@ import { MainContentComponent } from './components/main-content/main-content.com
     ExperienceComponent,
     ProjectsComponent,
     EditEducationComponent,
-    MainContentComponent
+    MainContentComponent,
+    EditExperienceComponent
   ],
   imports: [
     BrowserModule,

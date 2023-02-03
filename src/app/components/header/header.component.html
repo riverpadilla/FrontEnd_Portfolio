@@ -23,20 +23,15 @@
                     <span> {{headerPortfolio.location}} </span>
                     <span> <a [href]="headerPortfolio.email">Informacion de Contacto</a></span>
                 </div>
+                <div id="info-actions">
+                    <input type="button" class="btn btn-primary" value="Tengo interés en">
+                    <input type="button" class="btn btn-light" value="Añadir Sección">
+                    <input type="button" class="btn btn-light" value="Más">
+                </div>
             </div>
-            <ul id="info-details">
-                <li><a [href]="headerPortfolio.companyUrl">
-                        <img [src]="headerPortfolio.companyLogo" [alt]="headerPortfolio.companyName">
-                        <h5>{{headerPortfolio.companyName}}</h5>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div id="info-actions">
-            <input type="button" class="btn btn-primary" value="Tengo interés en">
-            <input type="button" class="btn btn-light" value="Añadir Sección">
-            <input type="button" class="btn btn-light" value="Más">
+            <div class="row" id="aboutme">
+                <app-about></app-about>
+            </div>
         </div>
     </div>
 </div>

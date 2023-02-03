@@ -2,9 +2,10 @@
   "barInfo": {
     "id": 1,
     "barTitle": "Rivelino Padilla Doria",
-    "twitterUrl": "https://twitter.com/riverpadilla",
-    "youTubeUrl": "https://youtube.com/riverpadilla",
-    "instagramUrl": "https://www.instagram.com/rivernetinc/"
+    "githubUrl":"https://github.com/riverpadilla",
+    "twitterUrl":"https://twitter.com/riverpadilla",
+    "facebookUrl":"https://facebook.com/riverpadilla",
+    "instagramUrl":"https://www.instagram.com/rivernetinc/"
   },
   "header": {
     "id": 1,

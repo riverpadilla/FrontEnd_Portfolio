@@ -1,0 +1,63 @@
+
+<form 
+class="edit-form" 
+(ngSubmit)="onSubmit()"
+>
+  <h2 class="mb-3">Entrada de Datos</h2>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Experiencia Profesional:</span>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="formControlInput1" 
+      placeholder="Descripción de la Experiencia Profesional"
+      [ngModel]="school"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Compañia:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput2"
+      placeholder="Nombre de la compañia donde laboró"
+      [ngModel]="title"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Período de Trabajo:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput3"
+      placeholder="Año de Inicio y de Finalización de su labor"
+      [ngModel]="date"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Ubicación donde Laboró:</span>
+    <input
+      type="text"
+      class="form-control"
+      id="formControlInput4"
+      placeholder="Ciudad y Pais donde donde desempeño su labor"
+      [ngModel]="location"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Logo de Compañia:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput5"
+      placeholder="Ruta de acceso a la imagen que identifica la compañia donde laboró"
+      [ngModel]="logoUrl"
+      >
+  </div>
+
+    <div class="btn-group container" role="group" aria-label="Basic example">
+      <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" id="btnSave">Guardar</button>
+      <button class="btn btn-primary col-5" type="button" routerLink="/" id="btnCancel">Cancelar</button>
+    </div>
+   
+</form>
