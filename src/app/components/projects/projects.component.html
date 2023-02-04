@@ -5,12 +5,14 @@
     </div>
 
     <ul class="pr-list">
-        <li *ngFor="let proj of dataProject">
-
+        <li *ngFor="let proj of dataProject">         
             <div>
-                <h4> {{proj.title}} </h4>
                 <div>
-                    <div class="btn text-primary" (click)="onEdit(proj)"><i class="fa-solid fa-pencil"></i></div>
+                    <i class="fa-solid fa-list-check text-primary"></i>
+                    <h4> {{proj.title}} </h4>
+                </div>
+                <div>
+                    <div class="btn text-primary" (click)="onEdit(proj)" routerLink="/edit-projects"><i class="fa-solid fa-pencil"></i></div>
                     <div class="btn text-primary" (click)="onDelete(proj)"><i class="fa-solid fa-trash-can"></i></div>
                 </div>
             </div>

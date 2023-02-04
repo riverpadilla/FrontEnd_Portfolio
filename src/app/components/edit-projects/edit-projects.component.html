@@ -1,0 +1,32 @@
+<form 
+class="edit-form" 
+(ngSubmit)="onSubmit()"
+>
+  <h2 class="mb-3">Entrada de Datos</h2>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Título del Proyecto:</span>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="formControlInput1" 
+      placeholder="Introduzca el título del proyecto desarrollado"
+      [ngModel]="title"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Descripción del Proyecto:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput2"
+      placeholder="Introduzca una breve descripción del proyecto desarrollado"
+      [ngModel]="description"
+      >
+  </div>
+
+    <div class="btn-group container" role="group" aria-label="Basic example">
+      <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" id="btnSave">Guardar</button>
+      <button class="btn btn-primary col-5" type="button" routerLink="/" id="btnCancel">Cancelar</button>
+    </div>
+   
+</form>

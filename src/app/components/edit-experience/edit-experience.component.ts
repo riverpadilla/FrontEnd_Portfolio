@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class EditExperienceComponent {
 
-  school:string="";
-  title:string="";
-  logoUrl:string="";
+  description:string="";
+  company:string="";
   date:string="";
   location:string="";
+  logoUrl:string="";
 
 
 onSubmit(){

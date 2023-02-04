@@ -16,6 +16,7 @@ import { PortfolioService } from './services/portfolio.service';
 import { EditExperienceComponent } from './components/edit-experience/edit-experience.component';
 import { EditEducationComponent } from './components/edit-education/edit-education.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { EditProjectsComponent } from './components/edit-projects/edit-projects.component';
 
 
 
@@ -32,7 +33,8 @@ import { MainContentComponent } from './components/main-content/main-content.com
     ProjectsComponent,
     EditEducationComponent,
     MainContentComponent,
-    EditExperienceComponent
+    EditExperienceComponent,
+    EditProjectsComponent
   ],
   imports: [
     BrowserModule,
