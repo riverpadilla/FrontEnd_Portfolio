@@ -1,23 +1,24 @@
-<div class="card custom-card" id="projects">
+<div class="card custom-card" id="project" >
     <div class="card-title">
         <h2> Proyectos </h2>
         <div class="btn-add"> <a href="#" title="Adicionar Proyecto"> <i class="fa-solid fa-plus"></i> </a> </div>
     </div>
 
-    <ul class="pr-list">
-        <li *ngFor="let proj of dataProject">         
-            <div>
+    <ul class="cv-list">
+        <li class="cv-item" *ngFor="let proj of dataProject">
+            
+            <div class="cv-text">
+                <i class="fa-solid fa-list-check text-primary"></i>      
                 <div>
-                    <i class="fa-solid fa-list-check text-primary"></i>
                     <h4> {{proj.title}} </h4>
-                </div>
-                <div>
-                    <div class="btn text-primary" (click)="onEdit(proj)" routerLink="/edit-projects"><i class="fa-solid fa-pencil"></i></div>
-                    <div class="btn text-primary" (click)="onDelete(proj)"><i class="fa-solid fa-trash-can"></i></div>
+                    <p>{{proj.description}}</p>
                 </div>
             </div>
-
-            <p>{{proj.description}}</p>
+            
+            <div>
+                <div class="btn text-primary" (click)="onEdit(proj)" routerLink="/edit-projects"><i class="fa-solid fa-pencil"></i></div>
+                <div class="btn text-primary" (click)="onDelete(proj)"><i class="fa-solid fa-trash-can"></i></div>
+            </div>
         </li>
     </ul>
 </div>

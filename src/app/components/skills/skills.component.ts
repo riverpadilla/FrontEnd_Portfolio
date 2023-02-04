@@ -30,8 +30,9 @@ export class SkillsComponent {
     
   }
 
-  onEdit(){
-    this.datosPortfolio.toggleFormulario(true);
+  onEdit(skill:any){
+    console.log("Editando registro skill");
+    console.log(skill)
   }
 
   onCancel(){

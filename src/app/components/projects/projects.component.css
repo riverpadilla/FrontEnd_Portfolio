@@ -1,4 +1,5 @@
-#projects h4 {
-    color: blue;
-    margin-left: 10px;
+
+.cv-text div {
+    margin-left: 20px;
+    margin-top: -0.5rem;
 }

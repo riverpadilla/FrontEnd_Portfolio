@@ -29,42 +29,25 @@ a {
     list-style: none;
 }
 
-.cv-list li {
+.cv-item {
     display: flex;
     justify-content: space-between;
 }
 
-.cv_item {
+.cv-text {
     display: flex;
+    padding: 10px;
 }
 
-.cv_item img {
+.cv-item img {
     width: 80px;
     height: 40px;
     padding: 0px 20px;
 }
 
-
-
 p {
     line-height: 1.2;
     font-size: 10pt;
-}
-
-.bar-item {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.pr-list {
-    list-style: none;
-}
-
-.pr-list div {
-    display: flex;
-    justify-content: space-between;
 }
 
 #edit-image {
@@ -75,13 +58,13 @@ p {
     max-width: 1000px;
     margin: 30px auto;
     overflow: auto;
-    min-height: 300px;
+    min-height: 100px;
     border: 1px solid steelblue;
     padding: 30px;
     border-radius: 10px;
 }
 
- .edit-form .container {
+.edit-form .container {
     margin-left: 10%;
     width: 80%;
     margin-right: 10%;

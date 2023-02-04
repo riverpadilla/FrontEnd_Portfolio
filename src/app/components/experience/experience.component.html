@@ -5,8 +5,8 @@
     </div>
 
     <ul class="cv-list">
-        <li *ngFor="let experience of dataExperience">
-            <div class="cv_item">
+        <li class="cv-item" *ngFor="let experience of dataExperience">
+            <div class="cv-text">
                 <img [src]="experience.logo" class="border border-0" alt="experience.description" [title]="experience.description">
                 <div>
                     <h4> {{experience.position}} </h4>

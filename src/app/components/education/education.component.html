@@ -5,8 +5,8 @@
     </div>
 
     <ul class="cv-list">
-        <li *ngFor="let education of dataEducation">
-            <div class="cv_item">
+        <li class="cv-item" *ngFor="let education of dataEducation">
+            <div class="cv-text">
                 <img [src]="education.logo" class="border border-0" [alt]="education.description">
                 <div>
                     <h4> {{education.school}} </h4>

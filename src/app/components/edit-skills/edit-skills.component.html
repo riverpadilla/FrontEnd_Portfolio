@@ -1,0 +1,26 @@
+<form 
+class="edit-form" 
+(ngSubmit)="onSubmit()"
+>
+<div class="mb-3 input-group">
+    <span class="input-group-text">Descripción Skill:</span>
+    <input 
+        type="text"
+        class="form-control"
+        placeholder="Descripción del Skill"
+        [(ngModel)]="description"
+    >
+    <span class="input-group-text">Proficiencia:</span>
+    <input 
+        type="text"
+        class="form-control"
+        placeholder="proficiencia en el skill" 
+        [(ngModel)]="grade"
+    >
+</div>
+    <div class="btn-group container" role="group" aria-label="Basic example">
+        <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" id="btnSave">Guardar</button>
+        <button class="btn btn-primary col-5" type="button" routerLink="/" id="btnCancel">Cancelar</button>
+    </div>
+
+</form>
