@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { header } from 'src/app/model/header.model';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 
 export class HeaderComponent implements OnInit {
 
-  headerPortfolio:any;
+  headerPortfolio:header=new header;
   componente:string="header";
   
 
@@ -21,7 +22,7 @@ export class HeaderComponent implements OnInit {
     this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
     { 
       this.headerPortfolio=data;
-      console.log("Datos obtenidos:" + data)
+      console.log(this.headerPortfolio)
     });
     
   }
