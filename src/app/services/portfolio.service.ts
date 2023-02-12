@@ -14,19 +14,31 @@ export class PortfolioService {
 
   private apiUrl= 'http://localhost:8080';
   private showFormulario:boolean = false;
+  private showFormularioAbout:boolean = false;
   private subject = new Subject<any>();
+  private subjectAbout = new Subject<any>();
+  private subjectHeader = new Subject<any>();
   private item :any="";
 
   constructor(private http:HttpClient) { }
 
 
-  toggleFormulario(check:boolean):void{
+  toggleFormulario(code:Number, check:boolean):void{
     this.showFormulario = check;
-    this.subject.next(this.showFormulario);
+    if (code==1) {
+      this.subjectAbout.next(this.showFormulario);
+    }else{
+      this.subjectHeader.next(this.showFormulario);
+    }
+    
   }
 
-  onToggle():Observable<any>{
-    return this.subject.asObservable();
+  onToggle(code:Number):Observable<any>{
+    if(code==1){
+      return this.subjectAbout.asObservable();
+    }else{
+      return this.subjectHeader.asObservable();
+    }
   }
 
   obtenerDatos(componente:string):Observable<any> {

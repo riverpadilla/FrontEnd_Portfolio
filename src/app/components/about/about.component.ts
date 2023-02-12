@@ -11,7 +11,7 @@ import { header } from 'src/app/model/header.model';
 
 export class AboutComponent implements OnInit {
 
-  headerPortfolio:header= new header;
+  aboutPortfolio:header= new header;
   componente:string="header";
   textoAcercaDe:String="";
 
@@ -19,24 +19,24 @@ export class AboutComponent implements OnInit {
   suscription?:Subscription;
 
   constructor(private datosPortfolio: PortfolioService) {
-    this.suscription = this.datosPortfolio.onToggle().subscribe(value => this.showFormulario = value)
+    this.suscription = this.datosPortfolio.onToggle(1).subscribe(value => this.showFormulario = value)
   }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
     { 
-      this.headerPortfolio=data[0];
+      this.aboutPortfolio=data[0];
     });
     
   }
 
   onEdit(){
-    this.textoAcercaDe=this.headerPortfolio.about;
-    this.datosPortfolio.toggleFormulario(true);
+    this.textoAcercaDe=this.aboutPortfolio.about;
+    this.datosPortfolio.toggleFormulario(1,true);
   }
 
   onCancel(){
-    this.datosPortfolio.toggleFormulario(false);
+    this.datosPortfolio.toggleFormulario(1,false);
   }
 
   onSubmit(){
@@ -44,9 +44,9 @@ export class AboutComponent implements OnInit {
       alert("Incluir una breve información acerca de usted. No puede dejar este espacio en blanco");
       return
     }
-    this.headerPortfolio.about=this.textoAcercaDe;
+    this.aboutPortfolio.about=this.textoAcercaDe;
 
-    this.datosPortfolio.editarItem(this.componente,this.headerPortfolio,false).subscribe();
+    this.datosPortfolio.editarItem(this.componente,this.aboutPortfolio,false).subscribe();
     this.onCancel();
   }
 

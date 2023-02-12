@@ -36,7 +36,7 @@ export class SkillsComponent {
   }
 
   onCancel(){
-    this.datosPortfolio.toggleFormulario(false);
+    this.datosPortfolio.toggleFormulario(3,false);
   }
 
   onSubmit(item:any){

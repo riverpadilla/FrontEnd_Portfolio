@@ -9,13 +9,12 @@ import { EditHeaderComponent } from './components/edit-header/edit-header.compon
 import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [
-  // {path:'', component:MainContentComponent },
-  {path:'edit-header', component:EditHeaderComponent},
+  {path:'', component:MainContentComponent },
+  // {path:'edit-header', component:EditHeaderComponent},
   {path:'edit-experience', component:EditExperienceComponent},
   {path:'edit-education', component:EditEducationComponent},
   {path:'edit-skills', component:EditSkillsComponent},
   {path:'edit-projects', component:EditProjectsComponent},
-  {path: 'header',component:HeaderComponent}
 ];
 
 @NgModule({

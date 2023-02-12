@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { Subscription } from 'rxjs';
 import { header } from 'src/app/model/header.model';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
@@ -12,6 +13,8 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 
 export class EditHeaderComponent implements OnInit{
 
+  
+
   // backImage:string="";
   name:String= "";
   position:String="";
@@ -23,8 +26,11 @@ export class EditHeaderComponent implements OnInit{
   headerPortfolio:header=new header;
   componente:string="header";
 
-  constructor(private datosPortfolio: PortfolioService) {
+  showFormulario:boolean=true;
+  suscription?:Subscription;
 
+  constructor(private datosPortfolio: PortfolioService) {
+    this.suscription = this.datosPortfolio.onToggle(2).subscribe(value => this.showFormulario = value)
   }
 
   ngOnInit(): void {
@@ -42,7 +48,11 @@ export class EditHeaderComponent implements OnInit{
       });
   
  
-  };
+  }
+
+  onCancel(){
+    this.datosPortfolio.toggleFormulario(2,false);
+  }
 
   onSubmit(){
     // this.headerPortfolio.backImage=this.backImage;
@@ -54,6 +64,6 @@ export class EditHeaderComponent implements OnInit{
     // this.headerPortfolio.about=this.about;
    
     this.datosPortfolio.editarItem(this.componente,this.headerPortfolio,false).subscribe();
-
+    this.onCancel()
   }
 }
