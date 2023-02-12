@@ -50,11 +50,11 @@ export class PortfolioService {
   editarItem(componente:string, item:any, check:boolean):Observable<any>{
     let url:string="";
     if (check){
-      url =this.apiUrl + "/" + componente + "/"+ `${item.id}`;
+      url =this.apiUrl + "/" + componente + "/edit/"+ `${item.id}`;
     } else{
-      url=this.apiUrl + "/" + componente;
+      url=this.apiUrl + "/" + componente+ "/edit";
     }
-    
+    console.log(url, item);
     return  this.http.put(url,item,httpOptions);
   }
 
@@ -67,5 +67,9 @@ export class PortfolioService {
     }
     
     return  this.http.post(url,item,httpOptions);
+  }
+
+  headerRefresh(){
+    window.location.reload();
   }
 }

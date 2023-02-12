@@ -8,6 +8,10 @@ export class header{
     location: String;
     email: String;
     about: String;
+    githubUrl:String;
+    twitterUrl:String;
+    facebookUrl: String;
+    instagramUrl: String;
 
     constructor
     (
@@ -17,7 +21,11 @@ export class header{
         profileImage: String="",
         location: String="",
         email: String="",
-        about: String=""
+        about: String="",
+        githubUrl:String="",
+        twitterUrl:String="",
+        facebookUrl: String="",
+        instagramUrl: String=""
     )
     {
         this.backImage=backImage;
@@ -27,5 +35,9 @@ export class header{
         this.location=location;
         this.email=email;
         this.about=about;
+        this.githubUrl=githubUrl;
+        this.twitterUrl=twitterUrl;
+        this.facebookUrl=facebookUrl;
+        this.instagramUrl=instagramUrl;
     }
 }

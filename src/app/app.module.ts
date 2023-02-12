@@ -44,7 +44,7 @@ import { EditHeaderComponent } from './components/edit-header/edit-header.compon
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [PortfolioService],
   bootstrap: [AppComponent]

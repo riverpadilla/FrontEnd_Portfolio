@@ -1,3 +1,5 @@
+<app-topbar></app-topbar>
+
 <div class="card custom-card" id="info-Header">
 
     <div id="info-background">
@@ -22,7 +24,7 @@
         <div id="info-data">
             <div id="profile-data">
                <div>
-                    <h1> {{headerPortfolio.name}} Padilla</h1>
+                    <h1> {{headerPortfolio.name}}</h1>
                     <span class="btn text-primary" (click)="onEdit(headerPortfolio)" routerLink="/edit-header">
                         <i class="fa-solid fa-pencil"></i>
                     </span>
@@ -41,7 +43,6 @@
             <div class="row" id="aboutme">
                 <app-about></app-about>
             </div>
-            {{headerPortfolio.name}}
         </div>
     </div>
 </div>

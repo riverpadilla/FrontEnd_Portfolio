@@ -1,5 +1,8 @@
 import { Component, OnInit} from '@angular/core';
+import { header } from 'src/app/model/header.model';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+
+
 
 @Component({
   selector: 'app-edit-header',
@@ -9,15 +12,15 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 
 export class EditHeaderComponent implements OnInit{
 
-  backImage:string="";
-  name:string="";
-  position:string="";
+  // backImage:string="";
+  name:String= "";
+  position:String="";
   // profileImage:string="";
-  location:string="";
-  email:string="";
+  location:String="";
+  email:String="";
   // about:string="";
 
-  headerPortfolio:any;
+  headerPortfolio:header=new header;
   componente:string="header";
 
   constructor(private datosPortfolio: PortfolioService) {
@@ -25,21 +28,24 @@ export class EditHeaderComponent implements OnInit{
   }
 
   ngOnInit(): void {
-   
-    this.headerPortfolio=this.datosPortfolio.writeData();
-    console.log(this.headerPortfolio)
-    this.backImage=this.headerPortfolio.backImage;
-    this.name=this.headerPortfolio.name;
-    this.position=this.headerPortfolio.position;
-    // this.profileImage=this.headerPortfolio.profileImage;
-    this.location=this.headerPortfolio.location;
-    this.email=this.headerPortfolio.email;
-    // this.about=this.headerPortfolio.about;
+    
+    this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
+      { 
+        this.headerPortfolio=data[0];
+      // this.headerPortfolio=this.datosPortfolio.writeData();
+      this.name=this.headerPortfolio.name;
+      this.position=this.headerPortfolio.position;
+      // this.profileImage=this.headerPortfolio.profileImage;
+      this.location=this.headerPortfolio.location;
+      this.email=this.headerPortfolio.email;
+      // this.about=this.headerPortfolio.about;
+      });
+  
+ 
   };
 
   onSubmit(){
-    
-    this.headerPortfolio.backImage=this.backImage;
+    // this.headerPortfolio.backImage=this.backImage;
     this.headerPortfolio.name=this.name;
     this.headerPortfolio.position=this.position;
     // this.headerPortfolio.profileImage=this.profileImage;
@@ -47,8 +53,7 @@ export class EditHeaderComponent implements OnInit{
     this.headerPortfolio.email=this.email;
     // this.headerPortfolio.about=this.about;
    
-
-    this.datosPortfolio.editarItem(this.componente,this.headerPortfolio,false)
+    this.datosPortfolio.editarItem(this.componente,this.headerPortfolio,false).subscribe();
 
   }
 }
