@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
     this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
     { 
       this.headerPortfolio=data;
-      console.log("Datos obtenidos:" + this.headerPortfolio)
+      console.log("Datos obtenidos:" + data)
     });
     
   }

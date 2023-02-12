@@ -31,7 +31,6 @@ export class PortfolioService {
 
   obtenerDatos(componente:string):Observable<any> {
     const url = this.apiUrl + "/" + componente;
-    console.log("Esta es la url " + url)
     return this.http.get(url);
   }
 
@@ -56,8 +55,6 @@ export class PortfolioService {
       url=this.apiUrl + "/" + componente;
     }
     
-    console.log(url);
-    console.log(item);
     return  this.http.put(url,item,httpOptions);
   }
 
@@ -69,8 +66,6 @@ export class PortfolioService {
       url=this.apiUrl + "/" + componente;
     }
     
-    console.log(url);
-    console.log(item);
     return  this.http.post(url,item,httpOptions);
   }
 }
