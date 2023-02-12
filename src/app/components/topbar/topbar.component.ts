@@ -9,13 +9,14 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 export class TopbarComponent implements OnInit {
 
   topBarPortfolio:any;
+  componente:string="barInfo"
 
   constructor(private datosPortfolio: PortfolioService) {
 
  }
 
  ngOnInit(): void {
-  this.datosPortfolio.obtenerDatos("barInfo").subscribe(data => 
+  this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
   { 
     this.topBarPortfolio=data;
   });

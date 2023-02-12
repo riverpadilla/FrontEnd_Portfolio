@@ -11,8 +11,7 @@ const httpOptions = {
 })
 export class PortfolioService {
 
-  private apiUrl= 'http://localhost:5000';
-  // private apiUrl= 'http://localhost:8080';
+  private apiUrl= 'http://localhost:8080';
   private showFormulario:boolean = false;
   private subject = new Subject<any>();
   private item :any="";
@@ -30,7 +29,7 @@ export class PortfolioService {
   }
 
   obtenerDatos(componente:string):Observable<any> {
-    const url = this.apiUrl + "/" + componente;
+    const url = this.apiUrl + "/" + componente + "/view";
     return this.http.get(url);
   }
 
