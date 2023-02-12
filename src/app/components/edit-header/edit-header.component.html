@@ -1,0 +1,79 @@
+<form 
+class="edit-form" 
+(ngSubmit)="onSubmit()"
+>
+  <h2 class="mb-3">Entrada de Datos</h2>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Nomnre Completo:</span>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="formControlInput1" 
+      placeholder="Introduzca su nombre y apellido"
+      [(ngModel)]="name"
+      [ngModelOptions]="{standalone:true}"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Posición o Cargo Actual:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput2"
+      placeholder="Introduzca su cargo o posición actual"
+      [(ngModel)]="position"
+      [ngModelOptions]="{standalone:true}"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Ubicación donde Labora</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput3"
+      placeholder="Introduzca la ciudad y pais donde está laborando"
+      [(ngModel)]="location"
+      [ngModelOptions]="{standalone:true}"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Email de Contacto:</span>
+    <input
+      type="text"
+      class="form-control"
+      id="formControlInput4"
+      placeholder="Ciudad y Pais donde donde desempeño su labor"
+      [(ngModel)]="email"
+      [ngModelOptions]="{standalone:true}"
+      >
+  </div>
+  <!-- <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Imagen del Perfil:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput5"
+      placeholder="Ruta de acceso a la imagen que identifica el perfil"
+      [(ngModel)]="profileImage"
+      [ngModelOptions]="{standalone:true}"
+      >
+  </div>
+
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Imagen del Fondo de Perfil:</span>
+    <input 
+      type="text"
+      class="form-control"
+      id="formControlInput6"
+      placeholder="Ruta de acceso a la imagen qde fondo del perfil"
+      [(ngModel)]="backImage"
+      [ngModelOptions]="{standalone:true}"
+      >
+  </div> -->
+
+    <div class="btn-group container" role="group" aria-label="Basic example">
+      <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" routerLink="/" id="btnSave">Guardar</button>
+      <button class="btn btn-primary col-5" type="button" routerLink="/" id="btnCancel">Cancelar</button>
+    </div>
+   
+</form>
