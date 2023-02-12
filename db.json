@@ -2,10 +2,11 @@
   "barInfo": {
     "id": 1,
     "barTitle": "Rivelino Padilla Doria",
-    "githubUrl":"https://github.com/riverpadilla",
-    "twitterUrl":"https://twitter.com/riverpadilla",
-    "facebookUrl":"https://facebook.com/riverpadilla",
-    "instagramUrl":"https://www.instagram.com/rivernetinc/"
+    "githubUrl": "https://github.com/riverpadilla",
+    "twitterUrl": "https://twitter.com/riverpadilla",
+    "facebookUrl": "https://facebook.com/riverpadilla",
+    "instagramUrl": "https://www.instagram.com/rivernetinc/",
+    "APLogo": "./assets/images/APLogo.jpg"
   },
   "header": {
     "id": 1,
@@ -14,10 +15,7 @@
     "position": "Estudiante para Programador Full Stack Web Jr",
     "profileImage": "./assets/images/Rivelino.jpg",
     "location": "Neuquén, Argentina",
-    "email": "mailto://riverpadilla@msn.com",
-    "companyName": "Capacitación Argentina Programa",
-    "companyLogo": "./assets/images/APLogo.jpg",
-    "companyUrl": "#",
+    "email": "riverpadilla@msn.com",
     "about": "Ingeniero de Petróleos y Desarrollador de Software, con interés en nuevas tecnologías, tanto en la parte de software como en hardware."
   },
   "experience": [
@@ -75,8 +73,8 @@
       "grade": "85%"
     },
     {
-      "id": 2,
-      "description": "Diseño de Sistemas",
+      "id": 1,
+      "description": "Analisis de Estrategias",
       "label": "progress2",
       "grade": "75%"
     }
@@ -88,7 +86,6 @@
       "description": "Desarrollamos un software para predecir la formación de hidratos en lineas de flujo de gas natural."
     },
     {
-      "id": 2,
       "title": "Aplicación para reportes de pruebas de producción",
       "description": "Desarrollé una aplicación para facilitar la elaboración de reportes en pruebas de producción en pozos de gas."
     }

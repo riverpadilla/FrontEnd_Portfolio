@@ -23,8 +23,7 @@ export class ExperienceComponent implements OnInit {
   }
 
   onEdit(experience:any){
-    console.log("Editando registro Experiencia");
-    console.log(experience)
+    this.datosPortfolio.readData(experience);
   }
 
   onDelete(experience:any)

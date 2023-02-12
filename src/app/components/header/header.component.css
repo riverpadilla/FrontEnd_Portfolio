@@ -1,17 +1,24 @@
-
 #info-Header {
     padding: 0px;
 }
 
 #info-background {
     display: flex;
-    z-index: 1;
 }
 
 #info-background img {
     border-radius: 20px 20px 0px 0px;
     width: 100%;
     height: 400px;
+    position: relative;
+    z-index: 0;
+}
+
+#btn-edit-bk-img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
 }
 
 #info {
@@ -20,38 +27,40 @@
 
 #info-img {
     display: flex;
+    margin-left: 2rem;
 }
+
+
 
 #info-data {
     display: flex;
+    margin-left: 2rem;
 }
 
+#profile-data{
+    width:40%;
+}
 .profile-img {
-    height: 152px;
-    width: 152px;
-    margin-top: -110px;
+    position: relative;
+    min-width: 200px;
+    max-width: 300px;
+    height: 15%;
+    width: 15%;
+    margin-top: -10rem;
     border-radius: 50%;
-    z-index: 1;
+    z-index: 2;
 }
-
-#info-details {
-    width: 25%;
-    list-style: none;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-#info-details img {
-    width: 100%;
-}
-
 
 #aboutme{
     padding: 10px;
-    margin-left: 50px;
-    width:85%;
+    width:60%;
 }
 
 #info-actions{
     margin-top: 10px;
+}
+
+i {
+    color: blue;
+    z-index: 1;
 }

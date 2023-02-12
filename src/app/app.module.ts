@@ -18,6 +18,7 @@ import { EditEducationComponent } from './components/edit-education/edit-educati
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { EditProjectsComponent } from './components/edit-projects/edit-projects.component';
 import { EditSkillsComponent } from './components/edit-skills/edit-skills.component';
+import { EditHeaderComponent } from './components/edit-header/edit-header.component';
 
 
 
@@ -36,7 +37,8 @@ import { EditSkillsComponent } from './components/edit-skills/edit-skills.compon
     MainContentComponent,
     EditExperienceComponent,
     EditProjectsComponent,
-    EditSkillsComponent
+    EditSkillsComponent,
+    EditHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -2,26 +2,35 @@
 
     <div id="info-background">
         <img class="backgnd-img" [src]="headerPortfolio.backImage" alt="Imagen Background">
-
     </div>
-
+    <span class="btn text-primary" id="btn-edit-bk-img">
+        <i class=" fa-solid fa-pencil"></i>
+    </span>
     <div id="info">
         <div id="info-img">
             <img class="profile-img" [src]="headerPortfolio.profileImage" alt="Profile Image">
-            <div class="btn-edit" onclick="item_Edit(0)"> <a href="#" class="btn-right" title="Editar Foto Portfolio"> 
-                <i class="fa-solid fa-pencil"></i>
-                </a> </div>
- <!--           <div>
-                <input type="file" id="edit-image" onchange="showFile(this)" title="Edit Picture">
-            </div> -->
+            <div class="btn text-primary btn-edit" onclick="item_Edit(0)"> 
+                <a href="#" title="Editar Foto Portfolio">
+                    <i class="fa-solid fa-pencil"></i>
+                </a>
+            </div>
+                <!--<div>
+                    <input type="file" id="edit-image" onchange="showFile(this)" title="Edit Picture">
+                </div> -->
         </div>
+
         <div id="info-data">
-            <div>
-                <h1> {{headerPortfolio.name}} </h1>
-                <div id="info-company"> {{headerPortfolio.position}} </div>
-                <div id="info-contacto">
+            <div id="profile-data">
+               <div>
+                    <h1> {{headerPortfolio.name}} </h1>
+                    <span class="btn text-primary" (click)="onEdit(headerPortfolio)" routerLink="/edit-header">
+                        <i class="fa-solid fa-pencil"></i>
+                    </span>
+                </div>
+                <div> {{headerPortfolio.position}} </div>
+                <div>
                     <span> {{headerPortfolio.location}} </span>
-                    <span> <a [href]="headerPortfolio.email">Informacion de Contacto</a></span>
+                    <span> <a [href]="'mailto://' + headerPortfolio.email">Informacion de Contacto</a></span>
                 </div>
                 <div id="info-actions">
                     <input type="button" class="btn btn-primary" value="Tengo interés en">

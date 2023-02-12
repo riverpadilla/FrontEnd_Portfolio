@@ -11,7 +11,8 @@ class="edit-form"
       class="form-control" 
       id="formControlInput1" 
       placeholder="Descripción de la Experiencia Profesional"
-      [ngModel]="description"
+      [(ngModel)]="position"
+      [ngModelOptions]="{standalone:true}"
       >
   </div>
   <div class="mb-3 input-group">
@@ -21,7 +22,8 @@ class="edit-form"
       class="form-control"
       id="formControlInput2"
       placeholder="Nombre de la compañia donde laboró"
-      [ngModel]="company"
+      [(ngModel)]="company"
+      [ngModelOptions]="{standalone:true}"
       >
   </div>
   <div class="mb-3 input-group">
@@ -31,7 +33,8 @@ class="edit-form"
       class="form-control"
       id="formControlInput3"
       placeholder="Año de Inicio y de Finalización de su labor"
-      [ngModel]="date"
+      [(ngModel)]="period"
+      [ngModelOptions]="{standalone:true}"
       >
   </div>
   <div class="mb-3 input-group">
@@ -41,7 +44,8 @@ class="edit-form"
       class="form-control"
       id="formControlInput4"
       placeholder="Ciudad y Pais donde donde desempeño su labor"
-      [ngModel]="location"
+      [(ngModel)]="location"
+      [ngModelOptions]="{standalone:true}"
       >
   </div>
   <div class="mb-3 input-group">
@@ -51,12 +55,13 @@ class="edit-form"
       class="form-control"
       id="formControlInput5"
       placeholder="Ruta de acceso a la imagen que identifica la compañia donde laboró"
-      [ngModel]="logoUrl"
+      [(ngModel)]="logoUrl"
+      [ngModelOptions]="{standalone:true}"
       >
   </div>
 
     <div class="btn-group container" role="group" aria-label="Basic example">
-      <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" id="btnSave">Guardar</button>
+      <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" routerLink="/" id="btnSave">Guardar</button>
       <button class="btn btn-primary col-5" type="button" routerLink="/" id="btnCancel">Cancelar</button>
     </div>
    
