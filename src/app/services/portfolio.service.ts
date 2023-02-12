@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
+import { header } from '../model/header.model';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type':'application/json'})
@@ -30,7 +31,7 @@ export class PortfolioService {
 
   obtenerDatos(componente:string):Observable<any> {
     const url = this.apiUrl + "/" + componente + "/view";
-    return this.http.get(url);
+    return this.http.get<any>(url);
   }
 
   borrarItem(componente:string, item:any):Observable<any>{
