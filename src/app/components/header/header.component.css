@@ -39,7 +39,15 @@
 
 #profile-data{
     width:40%;
+    padding:20px;
+    padding-right: 10%;
 }
+
+#profile-data .title{
+    display: flex;
+    justify-content: space-between;
+}
+
 .profile-img {
     position: relative;
     min-width: 200px;

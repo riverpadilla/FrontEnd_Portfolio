@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { header } from 'src/app/model/header.model';
+import { headerModel } from 'src/app/model/header.model';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class TopbarComponent implements OnInit {
 
-  topBarPortfolio:header= new header;
+  topBarPortfolio:headerModel= new headerModel;
   componente:string="header"
 
   constructor(private datosPortfolio: PortfolioService) {

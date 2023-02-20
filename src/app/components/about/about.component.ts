@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { PortfolioService } from 'src/app/services/portfolio.service'
 import { Subscription } from 'rxjs';
-import { header } from 'src/app/model/header.model';
+import { headerModel} from 'src/app/model/header.model';
 
 @Component({
   selector: 'app-about',
@@ -11,7 +11,7 @@ import { header } from 'src/app/model/header.model';
 
 export class AboutComponent implements OnInit {
 
-  aboutPortfolio:header= new header;
+  aboutPortfolio:headerModel= new headerModel;
   componente:string="header";
   textoAcercaDe:String="";
 

@@ -1,21 +1,21 @@
 <div class="card custom-card" id="experience">
     <div class="card-title">
         <h2> Experiencia </h2>
-        <div class="btn-add"> <a href="#" title="Agregar"> <i class="fa-solid fa-plus"></i> </a> </div>
+        <div class="btn text-primary" (click)="onCreate()" routerLink="/edit-experience"><i class="fa-solid fa-plus"></i></div>
     </div>
 
     <ul class="cv-list">
         <li class="cv-item" *ngFor="let experience of dataExperience">
             <div class="cv-text">
-                <img [src]="experience.logo" class="border border-0" alt="experience.description" [title]="experience.description">
+                <img [src]="experience.logoUrl" class="border border-0" alt="experience.description" [title]="experience.description">
                 <div>
                     <h4> {{experience.position}} </h4>
                     <p> 
                         {{experience.company}} 
                         <br>
-                        {{experience.period}} 
+                        {{experience.startDate}}-{{experience.endDate}}
                         <br>
-                        {{experience.location}}
+                        {{experience.city}},{{experience.country}}
                     </p>
                 </div>
             </div>

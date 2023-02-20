@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
-import { header } from '../model/header.model';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type':'application/json'})
@@ -14,13 +13,12 @@ export class PortfolioService {
 
   private apiUrl= 'http://localhost:8080';
   private showFormulario:boolean = false;
-  private showFormularioAbout:boolean = false;
-  private subject = new Subject<any>();
   private subjectAbout = new Subject<any>();
   private subjectHeader = new Subject<any>();
-  private item :any="";
+  private item:any = {};
+  private checkNew:Boolean = false;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {}
 
 
   toggleFormulario(code:Number, check:boolean):void{
@@ -43,20 +41,31 @@ export class PortfolioService {
 
   obtenerDatos(componente:string):Observable<any> {
     const url = this.apiUrl + "/" + componente + "/view";
+
     return this.http.get<any>(url);
   }
 
-  borrarItem(componente:string, item:any):Observable<any>{
-    const url=this.apiUrl + "/" + componente + "/"+ `${item.id}`;
-    return  this.http.delete(url);
-  }
-
-  readData(item:any) :void{
+  sendData(item:any,check:Boolean):void {
     this.item=item;
+    this.checkNew=check;
   }
 
-  writeData(){
+  receiveData():any{
     return this.item;
+  }
+
+  onNew():any{
+    return this.checkNew;
+  }
+
+
+
+  borrarItem(componente:string, item:any):Observable<any>{
+    const url=this.apiUrl + "/" + componente + "/delete/"+ `${item.id}`;
+
+    console.log(url);
+
+    return  this.http.delete(url);
   }
 
   editarItem(componente:string, item:any, check:boolean):Observable<any>{
@@ -66,22 +75,14 @@ export class PortfolioService {
     } else{
       url=this.apiUrl + "/" + componente+ "/edit";
     }
-    console.log(url, item);
-    return  this.http.put(url,item,httpOptions);
+
+    return this.http.put<any>(url,item,httpOptions);
   }
 
   crearItem(componente:string, item:any, check:boolean):Observable<any>{
-    let url:string="";
-    if (check){
-      url =this.apiUrl + "/" + componente + "/"+ `${item.id}`;
-    } else{
-      url=this.apiUrl + "/" + componente;
-    }
-    
-    return  this.http.post(url,item,httpOptions);
+    const url =this.apiUrl + "/" + componente + "/new";
+
+    return this.http.post<any>(url,item,httpOptions);
   }
 
-  headerRefresh(){
-    window.location.reload();
-  }
 }

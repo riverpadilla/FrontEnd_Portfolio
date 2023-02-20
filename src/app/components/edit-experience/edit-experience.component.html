@@ -27,24 +27,46 @@ class="edit-form"
       >
   </div>
   <div class="mb-3 input-group">
-    <span class="input-group-text col-3">Período de Trabajo:</span>
+    <span class="input-group-text col-3">Fecha de Inicio de Trabajo:</span>
     <input 
       type="text"
       class="form-control"
       id="formControlInput3"
-      placeholder="Año de Inicio y de Finalización de su labor"
-      [(ngModel)]="period"
+      placeholder="Fecha de Inicio de su labor"
+      [(ngModel)]="startDate"
       [ngModelOptions]="{standalone:true}"
       >
   </div>
   <div class="mb-3 input-group">
-    <span class="input-group-text col-3">Ubicación donde Laboró:</span>
-    <input
+    <span class="input-group-text col-3">Fecha de Final de Trabajo:</span>
+    <input 
       type="text"
       class="form-control"
       id="formControlInput4"
-      placeholder="Ciudad y Pais donde donde desempeño su labor"
-      [(ngModel)]="location"
+      placeholder="Fecha de Finalización de su labor"
+      [(ngModel)]="endDate"
+      [ngModelOptions]="{standalone:true}"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Ciudad donde Laboró:</span>
+    <input
+      type="text"
+      class="form-control"
+      id="formControlInput5"
+      placeholder="Ciudaddonde donde desempeño su labor"
+      [(ngModel)]="city"
+      [ngModelOptions]="{standalone:true}"
+      >
+  </div>
+  <div class="mb-3 input-group">
+    <span class="input-group-text col-3">Pais donde Laboró:</span>
+    <input
+      type="text"
+      class="form-control"
+      id="formControlInput6"
+      placeholder="País donde donde desempeño su labor"
+      [(ngModel)]="country"
       [ngModelOptions]="{standalone:true}"
       >
   </div>
@@ -53,14 +75,14 @@ class="edit-form"
     <input 
       type="text"
       class="form-control"
-      id="formControlInput5"
+      id="formControlInput7"
       placeholder="Ruta de acceso a la imagen que identifica la compañia donde laboró"
       [(ngModel)]="logoUrl"
       [ngModelOptions]="{standalone:true}"
       >
   </div>
 
-    <div class="btn-group container" role="group" aria-label="Basic example">
+    <div class="btn-group container" role="group" aria-label="Basic form">
       <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" routerLink="/" id="btnSave">Guardar</button>
       <button class="btn btn-primary col-5" type="button" routerLink="/" id="btnCancel">Cancelar</button>
     </div>

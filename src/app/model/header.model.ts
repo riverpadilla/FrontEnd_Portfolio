@@ -1,4 +1,4 @@
-export class header{
+export class headerModel{
 
     id?:Number;
     backImage:String;
