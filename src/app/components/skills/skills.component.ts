@@ -13,6 +13,7 @@ export class SkillsComponent {
   
   dataSkills:any;
   componente:string="skill";
+
   description:string="";
   grade:string="";
 
@@ -20,34 +21,17 @@ export class SkillsComponent {
   suscription?:Subscription;
 
 
-  constructor(private datosPortfolio: PortfolioService) {
-
-  }
+  constructor(private datosPortfolio: PortfolioService) {}
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
     { 
       this.dataSkills=data;
     });
-    
   }
 
   onEdit(skill:SkillsModel){
     this.datosPortfolio.sendData(skill,false);
-  }
-
-  onCancel(){
-    this.datosPortfolio.toggleFormulario(3,false);
-  }
-
-  onSubmit(skill:SkillsModel){
-    const check=true;
-    skill.description=this.description;
-    skill.grade=this.grade;
-
-    this.dataSkills=skill;
-    this.datosPortfolio.editarItem(this.componente,this.dataSkills,check).subscribe();
-    this.onCancel();
   }
 
   onDelete(skill:SkillsModel)
@@ -56,7 +40,6 @@ export class SkillsComponent {
     {
       this.dataSkills = this.dataSkills.filter((t: { id: any; }) => t.id !== skill.id)
     });
-
   }
 
   onCreate(){

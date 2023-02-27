@@ -17,8 +17,7 @@ export class EditSkillsComponent implements OnInit{
   componente:string="skill";
   checkNew:boolean = false;
 
-  constructor(private datosPortfolio: PortfolioService) {
-  }
+  constructor(private datosPortfolio: PortfolioService) {}
 
 ngOnInit(): void {
 
@@ -42,7 +41,5 @@ ngOnInit(): void {
     else{
       this.datosPortfolio.editarItem(this.componente,this.dataSkills,false).subscribe();
     }
-
-
   }
 }

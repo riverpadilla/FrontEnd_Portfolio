@@ -12,16 +12,13 @@ export class ExperienceComponent implements OnInit {
   dataExperience:any;
   componente:string="experience";
 
-  constructor(private datosPortfolio: PortfolioService) {
-
-  }
+  constructor(private datosPortfolio: PortfolioService) {}
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos(this.componente).subscribe(data => 
     { 
       this.dataExperience=data;
     });
-    
   }
 
   onEdit(experience:ExperienceModel){
@@ -34,11 +31,9 @@ export class ExperienceComponent implements OnInit {
     {
       this.dataExperience = this.dataExperience.filter((t: { id: any; }) => t.id !== experience.id)
     });
-
   }
 
   onCreate(){
-     
     this.datosPortfolio.sendData({},true);
   }
 
