@@ -3,23 +3,25 @@ class="edit-form"
 (ngSubmit)="onSubmit()"
 >
 <div class="mb-3 input-group">
-    <span class="input-group-text">Descripción Skill:</span>
+    <span class="input-group-text">Descripción de la Habilidad:</span>
     <input 
         type="text"
         class="form-control"
-        placeholder="Descripción del Skill"
+        placeholder="Descripción de la Habilidad"
         [(ngModel)]="description"
-    >
-    <span class="input-group-text">Proficiencia:</span>
+        [ngModelOptions]="{standalone:true}"
+        >
+    <span class="input-group-text">Proficiencia (%):</span>
     <input 
         type="text"
         class="form-control"
-        placeholder="proficiencia en el skill" 
+        placeholder="Proficiencia en la Habilidad" 
         [(ngModel)]="grade"
-    >
+        [ngModelOptions]="{standalone:true}"
+        >
 </div>
     <div class="btn-group container" role="group" aria-label="Basic example">
-        <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" id="btnSave">Guardar</button>
+        <button class="btn btn-primary col-5" type="button" (click)="onSubmit()" routerLink="/" id="btnSave">Guardar</button>
         <button class="btn btn-primary col-5" type="button" routerLink="/" id="btnCancel">Cancelar</button>
     </div>
 

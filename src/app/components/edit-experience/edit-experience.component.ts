@@ -25,7 +25,6 @@ export class EditExperienceComponent implements OnInit {
   checkNew:boolean = false;
 
   constructor(private datosPortfolio: PortfolioService) {
-
   }
 
   ngOnInit(): void {
@@ -43,8 +42,6 @@ export class EditExperienceComponent implements OnInit {
       this.logoUrl=this.dataExperience.logoUrl;
       this.description=this.dataExperience.description;
     }
-   
-  
   }
 
   onSubmit(){
@@ -66,7 +63,6 @@ export class EditExperienceComponent implements OnInit {
     else{
       this.datosPortfolio.editarItem(this.componente,this.dataExperience,false).subscribe();
     }
-
   }
 
 }

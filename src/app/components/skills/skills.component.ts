@@ -10,6 +10,7 @@ import { SkillsModel } from 'src/app/model/skills.model';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent {
+  
   dataSkills:any;
   componente:string="skill";
   description:string="";
@@ -57,4 +58,10 @@ export class SkillsComponent {
     });
 
   }
+
+  onCreate(){
+     
+    this.datosPortfolio.sendData({},true);
+  }
+
 }
