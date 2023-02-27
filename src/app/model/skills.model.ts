@@ -2,11 +2,11 @@ export class SkillsModel {
     
     id?: number;
     description:string;
-    grade:number;
+    grade:string;
 
     constructor(
         description:string="",
-        grade:number=0
+        grade:string=""
     ){
         this.description=description;
         this.grade=grade;

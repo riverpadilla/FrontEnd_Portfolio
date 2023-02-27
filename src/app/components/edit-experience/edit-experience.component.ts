@@ -20,7 +20,6 @@ export class EditExperienceComponent implements OnInit {
   description:string="Logo company";
 
   dataExperience:ExperienceModel = new ExperienceModel;
-  // dataExperience:any;
 
   componente:string="experience";
   checkNew:boolean = false;
@@ -50,7 +49,6 @@ export class EditExperienceComponent implements OnInit {
 
   onSubmit(){
 
-    console.log(this.checkNew,this.position)
     this.dataExperience.position=this.position;
     this.dataExperience.company=this.company;
     this.dataExperience.actualJob=this.actualJob;

@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { EducationModel } from 'src/app/model/education.model';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent implements OnInit {
+  
   dataEducation:any;
   componente:string="education";
 
@@ -22,17 +24,22 @@ export class EducationComponent implements OnInit {
     
   }
 
-  onEdit(education:any){
-    console.log("Editando registro Educación");
-    console.log(education)
+  onEdit(education:EducationModel){
+    this.datosPortfolio.sendData(education,false);
   }
 
-  onDelete(education:any)
+  onDelete(education:EducationModel)
   {
    this.datosPortfolio.borrarItem(this.componente,education).subscribe(() =>
     {
-      this.dataEducation = this.dataEducation.filter((t: { id: any; }) => t.id !== education.id)
+      this.dataEducation = this.dataEducation.filter((t: { id: number; }) => t.id !== education.id)
     });
 
-  }  
+  } 
+
+  onCreate(){
+     
+    this.datosPortfolio.sendData({},true);
+  }
+
 }

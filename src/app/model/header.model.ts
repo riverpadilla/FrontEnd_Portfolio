@@ -1,31 +1,31 @@
 export class headerModel{
 
     id?:Number;
-    backImage:String;
-    name:String;
-    position: String;
-    profileImage: String;
-    location: String;
-    email: String;
-    about: String;
-    githubUrl:String;
-    twitterUrl:String;
-    facebookUrl: String;
-    instagramUrl: String;
+    backImage:string;
+    name:string;
+    position: string;
+    profileImage: string;
+    location: string;
+    email: string;
+    about: string;
+    githubUrl:string;
+    twitterUrl:string;
+    facebookUrl: string;
+    instagramUrl: string;
 
     constructor
     (
-        backImage:String="",
-        name:String="",
-        position: String="",
-        profileImage: String="",
-        location: String="",
-        email: String="",
-        about: String="",
-        githubUrl:String="",
-        twitterUrl:String="",
-        facebookUrl: String="",
-        instagramUrl: String=""
+        backImage:string="",
+        name:string="",
+        position: string="",
+        profileImage: string="",
+        location: string="",
+        email: string="",
+        about: string="",
+        githubUrl:string="",
+        twitterUrl:string="",
+        facebookUrl: string="",
+        instagramUrl: string=""
     )
     {
         this.backImage=backImage;

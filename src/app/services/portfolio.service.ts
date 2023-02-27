@@ -58,8 +58,6 @@ export class PortfolioService {
     return this.checkNew;
   }
 
-
-
   borrarItem(componente:string, item:any):Observable<any>{
     const url=this.apiUrl + "/" + componente + "/delete/"+ `${item.id}`;
 

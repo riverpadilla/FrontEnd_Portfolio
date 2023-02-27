@@ -5,7 +5,7 @@
     <div id="info-background">
         <img class="backgnd-img" [src]="headerPortfolio.backImage" alt="Imagen Background">
     </div>
-    <span class="btn text-primary" id="btn-edit-bk-img">
+    <span class="btn text-primary btn-edit" (click)="onEdit(headerPortfolio)" id="btn-edit-bk-img">
         <i class=" fa-solid fa-pencil"></i>
     </span>
     <div id="info">
@@ -49,7 +49,7 @@
         >
             <h2 class="mb-3">Entrada de Datos</h2>
             <div class="mb-3 input-group">
-                <span class="input-group-text col-3">Nomnre Completo:</span>
+                <span class="input-group-text col-3">Nombre Completo:</span>
                 <input 
                 type="text" 
                 class="form-control" 
@@ -92,7 +92,7 @@
                 [ngModelOptions]="{standalone:true}"
                 >
             </div>
-            <!-- <div class="mb-3 input-group">
+            <div class="mb-3 input-group">
                 <span class="input-group-text col-3">Imagen del Perfil:</span>
                 <input 
                 type="text"
@@ -111,10 +111,10 @@
                 class="form-control"
                 id="formControlInput6"
                 placeholder="Ruta de acceso a la imagen qde fondo del perfil"
-                [(ngModel)]="backImage"
+                [(ngModel)]="bgImage"
                 [ngModelOptions]="{standalone:true}"
                 >
-            </div> -->
+            </div>
             
             <div class="btn-group container" role="group" aria-label="Basic example">
                 <button class="btn btn-primary col-5" type="button" (click)="onSubmit()"  id="btnSave">Guardar</button>

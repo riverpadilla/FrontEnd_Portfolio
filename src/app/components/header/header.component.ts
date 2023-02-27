@@ -11,10 +11,12 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 
 export class HeaderComponent implements OnInit {
 
-    name:String= "";
-    position:String="";
-    location:String="";
-    email:String="";
+    name:string= "";
+    position:string="";
+    location:string="";
+    email:string="";
+    profileImage:string="";
+    bgImage:string="";
 
 
   headerPortfolio:headerModel = new headerModel;
@@ -37,6 +39,8 @@ export class HeaderComponent implements OnInit {
       this.position=this.headerPortfolio.position;
       this.location=this.headerPortfolio.location;
       this.email=this.headerPortfolio.email;
+      this.profileImage=this.headerPortfolio.profileImage;
+      this.bgImage=this.headerPortfolio.backImage;
 
     });
     
@@ -55,6 +59,8 @@ export class HeaderComponent implements OnInit {
     this.headerPortfolio.position=this.position;
     this.headerPortfolio.location=this.location;
     this.headerPortfolio.email=this.email;
+    this.headerPortfolio.profileImage=this.profileImage;
+    this.headerPortfolio.backImage=this.bgImage;
    
     this.datosPortfolio.editarItem(this.componente,this.headerPortfolio,false).subscribe();
     this.onCancel()

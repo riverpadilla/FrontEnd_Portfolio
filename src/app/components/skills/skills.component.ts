@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { Subscription } from 'rxjs';
+import { SkillsModel } from 'src/app/model/skills.model';
 
 
 @Component({
@@ -30,27 +31,25 @@ export class SkillsComponent {
     
   }
 
-  onEdit(skill:any){
-    console.log("Editando registro skill");
-    console.log(skill)
+  onEdit(skill:SkillsModel){
+    this.datosPortfolio.sendData(skill,false);
   }
 
   onCancel(){
     this.datosPortfolio.toggleFormulario(3,false);
   }
 
-  onSubmit(item:any){
+  onSubmit(skill:SkillsModel){
     const check=true;
-    item.description=this.description;
-    item.grade=this.grade;
+    skill.description=this.description;
+    skill.grade=this.grade;
 
-    this.dataSkills=item;
-    console.log(this.dataSkills);
-    //this.datosPortfolio.editarItem(this.componente,this.dataSkills,check).subscribe();
-    //this.onCancel();
+    this.dataSkills=skill;
+    this.datosPortfolio.editarItem(this.componente,this.dataSkills,check).subscribe();
+    this.onCancel();
   }
 
-  onDelete(skill:any)
+  onDelete(skill:SkillsModel)
   {
    this.datosPortfolio.borrarItem(this.componente, skill).subscribe(() =>
     {

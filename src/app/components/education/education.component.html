@@ -1,19 +1,19 @@
 <div class="card custom-card" id="education">
     <div class="card-title">
         <h2> Educación </h2>
-        <div class="btn-add"> <a href="#" title="begin"> <i class="fa-solid fa-plus"></i> </a> </div>
+        <div class="btn text-primary" (click)="onCreate()" routerLink="/edit-education"><i class="fa-solid fa-plus"></i></div>
     </div>
 
     <ul class="cv-list">
         <li class="cv-item" *ngFor="let education of dataEducation">
             <div class="cv-text">
-                <img [src]="education.logo" class="border border-0" [alt]="education.description">
+                <img [src]="education.logoUrl" class="border border-0" [alt]="education.description">
                 <div>
                     <h4> {{education.school}} </h4>
                     <p> 
                         {{education.title}}
                         <br>
-                        {{education.date}}
+                        {{education.startYear}}-{{education.endYear}}
                     </p>
                 </div>
             </div>

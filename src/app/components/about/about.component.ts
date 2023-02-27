@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
 
   aboutPortfolio:headerModel= new headerModel;
   componente:string="header";
-  textoAcercaDe:String="";
+  textoAcercaDe:string="";
 
   showFormulario:boolean=false;
   suscription?:Subscription;
