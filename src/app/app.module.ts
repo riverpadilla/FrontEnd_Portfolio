@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -18,6 +18,8 @@ import { EditEducationComponent } from './components/edit-education/edit-educati
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { EditProjectsComponent } from './components/edit-projects/edit-projects.component';
 import { EditSkillsComponent } from './components/edit-skills/edit-skills.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthInterceptor } from './helpers/auth.interceptor';
 
 
 
@@ -36,7 +38,8 @@ import { EditSkillsComponent } from './components/edit-skills/edit-skills.compon
     MainContentComponent,
     EditExperienceComponent,
     EditProjectsComponent,
-    EditSkillsComponent
+    EditSkillsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ import { EditSkillsComponent } from './components/edit-skills/edit-skills.compon
     FormsModule,
     HttpClientModule,
   ],
-  providers: [PortfolioService],
-  bootstrap: [AppComponent]
-})
+  providers:[PortfolioService,{provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}],
+  bootstrap: [AppComponent],
+ })
 export class AppModule { }

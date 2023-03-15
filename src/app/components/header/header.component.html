@@ -1,31 +1,25 @@
 <app-topbar></app-topbar>
 
-<div class="card custom-card" id="info-Header">
-
+<div class="card custom-card" id="info-Header" >
     <div id="info-background">
         <img class="backgnd-img" [src]="headerPortfolio.backImage" alt="Imagen Background">
     </div>
-    <span class="btn text-primary btn-edit" (click)="onEdit(headerPortfolio)" id="btn-edit-bk-img">
+    <span class="btn text-primary btn-edit login" (click)="onEdit(2)" id="btn-edit-bk-img">
         <i class=" fa-solid fa-pencil"></i>
     </span>
     <div id="info">
         <div id="info-img">
             <img class="profile-img" [src]="headerPortfolio.profileImage" alt="Profile Image">
-            <div class="btn text-primary btn-edit" (click)="onEdit(headerPortfolio)"> 
-                <a href="#" title="Editar Foto Portfolio">
-                    <i class="fa-solid fa-pencil"></i>
-                </a>
+            <div class="btn text-primary btn-edit login" (click)="onEdit(1)"> 
+                <i class="fa-solid fa-pencil"></i>
             </div>
-                <!--<div>
-                    <input type="file" id="edit-image" onchange="showFile(this)" title="Edit Picture">
-                </div> -->
         </div>
 
-        <div id="info-data">
+        <div class="container-flex w-100" id="info-data">
             <div id="profile-data">
                <div class="title">
                     <h1> {{headerPortfolio.name}}</h1>
-                    <span class="btn text-primary" (click)="onEdit(headerPortfolio)">
+                    <span class="btn text-primary login" (click)="onEdit(0)">
                         <i class="fa-solid fa-pencil"></i>
                     </span>
                 </div>
@@ -48,7 +42,7 @@
         *ngIf="showFormulario"
         >
             <h2 class="mb-3">Entrada de Datos</h2>
-            <div class="mb-3 input-group">
+            <div class="mb-3 input-group" *ngIf="checkEdit[0]">
                 <span class="input-group-text col-3">Nombre Completo:</span>
                 <input 
                 type="text" 
@@ -59,7 +53,7 @@
                 [ngModelOptions]="{standalone:true}"
                 >
             </div>
-            <div class="mb-3 input-group">
+            <div class="mb-3 input-group" *ngIf="checkEdit[0]">
                 <span class="input-group-text col-3">Posición o Cargo Actual:</span>
                 <input 
                 type="text"
@@ -70,7 +64,7 @@
                 [ngModelOptions]="{standalone:true}"
                 >
             </div>
-            <div class="mb-3 input-group">
+            <div class="mb-3 input-group" *ngIf="checkEdit[0]">
                 <span class="input-group-text col-3">Ubicación donde Labora</span>
                 <input 
                 type="text"
@@ -81,7 +75,7 @@
                 [ngModelOptions]="{standalone:true}"
                 >
             </div>
-            <div class="mb-3 input-group">
+            <div class="mb-3 input-group" *ngIf="checkEdit[0]">
                 <span class="input-group-text col-3">Email de Contacto:</span>
                 <input
                 type="text"
@@ -92,7 +86,7 @@
                 [ngModelOptions]="{standalone:true}"
                 >
             </div>
-            <div class="mb-3 input-group">
+            <div class="mb-3 input-group" *ngIf="checkEdit[1]">
                 <span class="input-group-text col-3">Imagen del Perfil:</span>
                 <input 
                 type="text"
@@ -104,7 +98,7 @@
                 >
             </div>
             
-            <div class="mb-3 input-group">
+            <div class="mb-3 input-group" *ngIf="checkEdit[2]">
                 <span class="input-group-text col-3">Imagen del Fondo de Perfil:</span>
                 <input 
                 type="text"
@@ -116,7 +110,7 @@
                 >
             </div>
             
-            <div class="btn-group container" role="group" aria-label="Basic example">
+            <div class="btn-group container" role="group" aria-label="Save & Cancel Buttons">
                 <button class="btn btn-primary col-5" type="button" (click)="onSubmit()"  id="btnSave">Guardar</button>
                 <button class="btn btn-primary col-5" type="button" (click)="onCancel()"  id="btnCancel">Cancelar</button>
             </div>

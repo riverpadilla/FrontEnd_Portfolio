@@ -5,6 +5,7 @@ import { EditEducationComponent } from './components/edit-education/edit-educati
 import { EditExperienceComponent } from './components/edit-experience/edit-experience.component';
 import { EditProjectsComponent } from './components/edit-projects/edit-projects.component';
 import { EditSkillsComponent } from './components/edit-skills/edit-skills.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {path:'', component:MainContentComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'edit-education', component:EditEducationComponent},
   {path:'edit-skills', component:EditSkillsComponent},
   {path:'edit-projects', component:EditProjectsComponent},
+  {path:'login', component:LoginComponent},
 ];
 
 @NgModule({

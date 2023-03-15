@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { headerModel } from 'src/app/model/header.model';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
@@ -12,7 +13,8 @@ export class TopbarComponent implements OnInit {
   topBarPortfolio:headerModel= new headerModel;
   componente:string="header"
 
-  constructor(private datosPortfolio: PortfolioService) {
+  constructor(private datosPortfolio: PortfolioService,
+    private router: Router) {
 
  }
 
@@ -22,6 +24,18 @@ export class TopbarComponent implements OnInit {
     this.topBarPortfolio=data[0];
   });
   
+  }
+
+  onLogin(){
+    const loginCheck = document.querySelector(".social button");
+    
+    if(loginCheck!.innerHTML=="Login"){
+      this.router.navigate(['/login']);
+      loginCheck?.classList.add("disabled");
+    }else{
+      this.datosPortfolio.deleteToken();
+      loginCheck!.innerHTML="Login";
+    }
   }
 
 }

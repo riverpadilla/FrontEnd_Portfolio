@@ -24,6 +24,8 @@ export class HeaderComponent implements OnInit {
   
   showFormulario:boolean=false;
   suscription?:Subscription;
+  checkEdit=[true,false,false];
+
 
 
   constructor(private datosPortfolio: PortfolioService) {
@@ -43,10 +45,13 @@ export class HeaderComponent implements OnInit {
       this.bgImage=this.headerPortfolio.backImage;
 
     });
-    
   }
 
-  onEdit(header:any){
+  onEdit(code:number){
+    
+    this.checkEdit=[false,false,false];
+    this.checkEdit[code]=true;
+
     this.datosPortfolio.toggleFormulario(2,true);
   }
 

@@ -1,24 +1,24 @@
 <div class="about">
     <div class="card-title">
         <h2> Acerca de </h2>
-        <div class="btn-edit" (click)="onEdit()"> 
-            <a href="#" class="btn-right" title="Editar Información Acerca de"> 
-                <i class="fa-solid fa-pencil"></i>
-            </a> 
-        </div>
+        <div class="btn text-primary login" (click)="onEdit()"><i class="fa-solid fa-pencil"></i></div>
     </div>
     <div>
         <p id="text-about"> {{aboutPortfolio.about}} </p>
     </div>
     <div class="input-group" *ngIf="showFormulario">
         <span class="input-group-text">Acerca de:</span>
-        <input 
+        <textarea
             type="text"
             class="form-control"
             placeholder="Introducir aquí datos de interes acerca de usted" 
             [(ngModel)]="textoAcercaDe"
-        >
-            <button class="btn btn-primary" type="button" (click)="onSubmit()" id="btnSave">Guardar</button>
-            <button class="btn btn-primary" type="button" (click)="onCancel()" id="btnCancel">Cancelar</button>
+        ></textarea>
+        
+        <div class="btn-group container pt-3" role="group" aria-label="Save & Cancel Buttons">
+            <button class="btn btn-primary col-6" type="button" (click)="onSubmit()"  id="btnSave">Guardar</button>
+            <button class="btn btn-primary col-6" type="button" (click)="onCancel()"  id="btnCancel">Cancelar</button>
+        </div>
+     
     </div>
 </div>

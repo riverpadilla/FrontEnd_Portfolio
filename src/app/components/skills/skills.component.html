@@ -1,7 +1,7 @@
 <div class="card custom-card" id="skills">
     <div class="card-title">
         <h2> Habilidades </h2>
-        <div class="btn text-primary" (click)="onCreate()" routerLink="/edit-skills"><i class="fa-solid fa-plus"></i></div>
+        <div class="btn text-primary login" (click)="onCreate()" routerLink="/edit-skills"><i class="fa-solid fa-plus"></i></div>
     </div>
 
     <ul class="cv-list">
@@ -15,8 +15,8 @@
                 </div>
 
                 <div>
-                    <div class="btn text-primary" (click)="onEdit(skill)"  routerLink="/edit-skills"><i class="fa-solid fa-pencil"></i></div>
-                    <div class="btn text-primary" (click)="onDelete(skill)"><i class="fa-solid fa-trash-can"></i></div>
+                    <div class="btn text-primary login me-1" (click)="onEdit(skill)"  routerLink="/edit-skills"><i class="fa-solid fa-pencil"></i></div>
+                    <div class="btn text-primary login" (click)="onDelete(skill)"><i class="fa-solid fa-trash-can"></i></div>
                 </div>
             </div>
 

@@ -1,0 +1,28 @@
+
+<form 
+class="edit-form row"
+#form="ngForm">
+<div class="mb-3 input-group ">
+    <span class="input-group-text col-3">Nombre de Usuario:</span>
+    <input 
+        type="text"
+        class="form-control"
+        placeholder="Nombre de Usuario"
+        name="username"
+        [(ngModel)]="creds.username">
+</div>
+<div class="mb-3 input-group">
+    <span class="input-group-text col-3">Clave de Acceso:</span>
+    <input 
+        type="password"
+        class="form-control"
+        name="password"
+        placeholder="Clave de Acceso" 
+        [(ngModel)]="creds.password">
+</div>
+    <div class="btn-group container" role="group" aria-label="Basic example">
+        <button class="btn btn-primary col-5" type="button" (click)="onSubmit(form)" id="btnSave">Acceder</button>
+        <button class="btn btn-primary col-5" type="button" (click)="onCancel()" routerLink="/" id="btnCancel">Cancelar</button>
+    </div>
+
+</form>

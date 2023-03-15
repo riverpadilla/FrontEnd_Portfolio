@@ -1,7 +1,7 @@
 <div class="card custom-card" id="project" >
     <div class="card-title">
         <h2> Proyectos </h2>
-        <div class="btn text-primary" (click)="onCreate()" routerLink="/edit-projects"><i class="fa-solid fa-plus"></i></div>
+        <div class="btn text-primary login" (click)="onCreate()" routerLink="/edit-projects"><i class="fa-solid fa-plus"></i></div>
     </div>
 
     <ul class="cv-list">
@@ -16,8 +16,8 @@
             </div>
             
             <div>
-                <div class="btn text-primary" (click)="onEdit(proj)" routerLink="/edit-projects"><i class="fa-solid fa-pencil"></i></div>
-                <div class="btn text-primary" (click)="onDelete(proj)"><i class="fa-solid fa-trash-can"></i></div>
+                <div class="btn text-primary login me-1" (click)="onEdit(proj)" routerLink="/edit-projects"><i class="fa-solid fa-pencil"></i></div>
+                <div class="btn text-primary login" (click)="onDelete(proj)"><i class="fa-solid fa-trash-can"></i></div>
             </div>
         </li>
     </ul>
