@@ -28,6 +28,8 @@
 #info-img {
     display: flex;
     margin-left: 2rem;
+    /* width: 300px;
+    height:  300px; */
 }
 
 
@@ -52,6 +54,8 @@
     position: relative;
     min-width: 200px;
     max-width: 300px;
+    min-height: 200px;
+    max-height: 300px;
     height: 15%;
     width: 15%;
     margin-top: -10rem;
