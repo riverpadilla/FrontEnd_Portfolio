@@ -15,11 +15,11 @@ export class MainContentComponent implements AfterViewChecked{
   const loginCheck = document.querySelector(".social button");
   const modButtons = document.querySelectorAll(".login");
   
-    if(loginCheck!.innerHTML=="Login"){
-      modButtons.forEach(mButtons => mButtons.setAttribute("style", "visibility:hidden"))
-    }else{
-      modButtons.forEach(mButtons => mButtons.setAttribute("style", "visibility:visible"))
-    }
+    // if(loginCheck!.innerHTML=="Login"){
+    //   modButtons.forEach(mButtons => mButtons.setAttribute("style", "visibility:hidden"))
+    // }else{
+    //   modButtons.forEach(mButtons => mButtons.setAttribute("style", "visibility:visible"))
+    // }
   
   }
 }

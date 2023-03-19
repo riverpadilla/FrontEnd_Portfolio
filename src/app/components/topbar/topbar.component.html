@@ -1,22 +1,25 @@
-<div id="topBar">
-    <div class="logo_programa">
-        <img src="./assets/images/APLogo.png" alt="Argentina Programa">
+<div class="container-fluid d-flex align-items-center my-2" id="topBar">
+    <div class="logo_programa col-4 d-flex justify-content-start">
+        <img class="img-fluid float-start" src="./assets/images/APLogo.png" alt="Argentina Programa">
     </div>
 
-    <div class="social">
+    <div class="social col-8 py-2 d-flex justify-content-end">
+        
 
         <a [href]="topBarPortfolio.githubUrl" [title]="topBarPortfolio.githubUrl">
-            <img src="./assets/images/github.png" alt="Github Logo">
+            <img class="img-fluid px-1" src="./assets/images/github.png" alt="Github Logo">
         </a>
         <a [href]="topBarPortfolio.twitterUrl" [title]="topBarPortfolio.twitterUrl">
-            <img src="./assets/images/twitter.png" alt="Twitter Logo">
+            <img class="img-fluid px-1"src="./assets/images/twitter.png" alt="Twitter Logo">
         </a>
         <a [href]="topBarPortfolio.facebookUrl" [title]="topBarPortfolio.facebookUrl">
-            <img src="./assets/images/facebook.png" alt="Facebook Logo">
+            <img class="img-fluid px-1" src="./assets/images/facebook.png" alt="Facebook Logo">
         </a>
         <a [href]="topBarPortfolio.instagramUrl" [title]="topBarPortfolio.instagramUrl">
-            <img src="./assets/images/instagram.png" alt="Instagram Logo">
+            <img class="img-fluid px-1" src="./assets/images/instagram.png" alt="Instagram Logo">
         </a>
-        <button type="button" class="btn btn-primary" (click)="onLogin()">Login</button>
+
+        <button type="button" class="btn btn-primary float-end" (click)="onLogin()">Login</button>
+        
     </div>
 </div>

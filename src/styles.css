@@ -7,15 +7,15 @@
 }
 
 body{
-    display: flex;
-    padding-left: 0px;
+    /* display: flex; */
+    /* padding-left: 0px; */
     background-color:lightsteelblue;
    
 }
 
 a {
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
     text-decoration: none;
 }
 
@@ -36,8 +36,8 @@ a {
 .custom-card {
     display: flex;
     border-radius: 20px;
-    margin: 10px 20px;
-    padding: 20px;
+    /* margin: 10px 20px;
+    padding: 20px; */
     border-color: steelblue;
 }
 
