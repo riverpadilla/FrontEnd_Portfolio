@@ -1,0 +1,21 @@
+[debug] [2023-03-19T23:01:07.309Z] ----------------------------------------------------------------------
+[debug] [2023-03-19T23:01:07.311Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\river\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-03-19T23:01:07.311Z] CLI Version:   11.24.1
+[debug] [2023-03-19T23:01:07.311Z] Platform:      win32
+[debug] [2023-03-19T23:01:07.311Z] Node Version:  v16.17.1
+[debug] [2023-03-19T23:01:07.312Z] Time:          Sun Mar 19 2023 18:01:07 GMT-0500 (hora estándar de Colombia)
+[debug] [2023-03-19T23:01:07.312Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-19T23:01:07.319Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-19T23:01:07.320Z] > authorizing via signed-in user (riverpadilla@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\river\OneDrive\Documentos\00. Programing Projects\Argentina Programa\Repositorios\FrontEnd_Portfolio
+
