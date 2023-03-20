@@ -14,7 +14,8 @@ const httpOptions = {
 })
 export class PortfolioService {
 
-  private apiUrl= 'argentina-programa-riverpadilla.koyeb.app:8000';
+  private apiUrl= 'https://argentina-programa-riverpadilla.koyeb.app';
+  // private apiUrl= 'http://localhost:8080';
   private showFormulario:boolean = false;
   private subjectAbout = new Subject<any>();
   private subjectHeader = new Subject<any>();
@@ -24,7 +25,6 @@ export class PortfolioService {
   
 
   constructor(private http:HttpClient) {}
-
 
   toggleFormulario(code:Number, check:boolean):void{
     this.showFormulario = check;
